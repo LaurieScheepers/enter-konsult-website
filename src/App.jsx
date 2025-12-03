@@ -34,8 +34,8 @@ const PORTFOLIO_ITEMS = [
     id: "02",
     client: "VISION_FACTORY",
     title: "Factory Floor Intelligence",
-    desc: "Team Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
-    tags: ["AI/ML", "TEAM LEAD"],
+    desc: "Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
+    tags: ["AI/ML", "LEADERSHIP"],
     date: "10.2024"
   },
   {
@@ -160,7 +160,7 @@ const LandingPage = ({ goToPage }) => (
               onClick={() => goToPage('about')}
               className="group flex items-center gap-4 bg-black text-white px-8 py-4 hover:bg-orange-600 transition-colors duration-300 shadow-xl"
             >
-              <span className="font-mono text-sm tracking-widest uppercase">Start Strategy</span>
+              <span className="font-mono text-sm tracking-widest uppercase">ENTER</span>
               <ForwardEnterIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -396,7 +396,7 @@ const App = () => {
             onClick={() => setActivePage('about')}
             className="ml-4 bg-black text-white px-4 py-2 flex items-center gap-2 hover:bg-orange-600 transition-colors"
           >
-            <span className="font-mono text-xs font-bold tracking-widest">GET STRATEGY</span>
+            <span className="font-mono text-xs font-bold tracking-widest">ENTER</span>
             <ForwardEnterIcon className="w-3 h-3" />
           </button>
         </nav>
