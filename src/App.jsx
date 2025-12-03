@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, ArrowUpRight, Briefcase, Layers, Hexagon, Target, Zap, Users, Coffee, Plus } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, ExternalLink, Briefcase, Layers, Hexagon, Target, Zap, Users, Coffee, Plus } from 'lucide-react';
 
 // --- Assets & Icons ---
 
@@ -238,11 +238,12 @@ const ShowcasePage = () => (
           {/* Action */}
           <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0">
             {item.link ? (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                <ArrowUpRight className="w-6 h-6 text-orange-600 group-hover:text-black transition-colors" />
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-orange-600 hover:text-black transition-colors group/link">
+                <span className="font-mono text-xs uppercase tracking-wide hidden sm:inline group-hover/link:underline">View Live</span>
+                <ExternalLink className="w-5 h-5" />
               </a>
             ) : (
-              <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover:text-black transition-colors" />
+              <span className="font-mono text-xs text-gray-300 uppercase tracking-wide">Private</span>
             )}
           </div>
         </div>
