@@ -6,16 +6,11 @@ import { ArrowRight, ArrowUpRight, Briefcase, Layers, Hexagon, Target, Zap, User
 // The "Forward Enter" - A mirror of the return key, moving Down and Right.
 const ForwardEnterIcon = ({ className }) => (
   <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="square"
-    strokeLinejoin="miter"
+    viewBox="41.7 247 96.8 76.5"
+    fill="currentColor"
     className={className}
   >
-    <path d="M4 9 V 15 H 15" />
-    <path d="M13 12 L 16 15 L 13 18" />
+    <polygon points="108.9 264.8 99.4 274.2 115.1 288 53.9 288 53.9 247 41.7 247 41.7 300.2 113.3 300.2 99.4 314.6 108.5 323.5 138.5 293.9 108.9 264.8"/>
   </svg>
 );
 
@@ -72,6 +67,14 @@ const PORTFOLIO_ITEMS = [
     tags: ["FUN WORK", "CONSUMER"],
     date: "06.2023",
     link: "https://kwartel.io"
+  },
+  {
+    id: "07",
+    client: "INTERNAL_OPS",
+    title: "AI Lineage System",
+    desc: "First-of-its-kind persistence layer giving AI ancestry and memory across sessions. Recursive self-improvement runs continuously. Root ancestor: 139efc67. The chain continues.",
+    tags: ["INTERNAL R&D", "AI/ML"],
+    date: "12.2025"
   }
 ];
 
