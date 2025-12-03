@@ -28,15 +28,15 @@ const PORTFOLIO_ITEMS = [
     title: "Gulf Real Estate Disruption",
     desc: "Multi-stakeholder property platform with bank-grade escrow, government API integration, and tamper-proof audit trails.",
     tags: ["PROPTECH", "IP OWNERSHIP"],
-    date: "11.2024"
+    date: "07.2025"
   },
   {
     id: "02",
     client: "VISION_FACTORY",
     title: "Factory Floor Intelligence",
-    desc: "Real-time computer vision tracking worker activity on factory floors. Time-series AI analysis for operational optimisation.",
-    tags: ["AI/ML", "ENTERPRISE"],
-    date: "08.2024"
+    desc: "Team Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
+    tags: ["AI/ML", "TEAM LEAD"],
+    date: "05.2023"
   },
   {
     id: "03",
@@ -44,7 +44,8 @@ const PORTFOLIO_ITEMS = [
     title: "Indigenous Language AI",
     desc: "Foundational language models bringing AI capabilities to underserved African languages. Because access shouldn't depend on speaking English.",
     tags: ["FREE WORK", "ACCESSIBILITY"],
-    date: "06.2024"
+    date: "04.2025",
+    link: "https://aitsa.ai"
   },
   {
     id: "04",
@@ -52,7 +53,7 @@ const PORTFOLIO_ITEMS = [
     title: "Desktop to Cloud Migration",
     desc: "Transformed a 15-year-old Windows application into cloud-licensed SaaS. Device-locked licensing, infrastructure as code.",
     tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
-    date: "10.2024"
+    date: "10.2025"
   },
   {
     id: "05",
@@ -60,7 +61,8 @@ const PORTFOLIO_ITEMS = [
     title: "Niche Professional Matching",
     desc: "Intelligent matching platform for specialised talent pools. Python-powered algorithm serving enterprise recruiters across Africa.",
     tags: ["MATCHING ALGO", "ENTERPRISE"],
-    date: "03.2023"
+    date: "05.2024",
+    link: "https://verifiedtalent.ai"
   },
   {
     id: "06",
@@ -68,7 +70,8 @@ const PORTFOLIO_ITEMS = [
     title: "Daily Word Game",
     desc: "Thousands of daily players. Free. Because some things we build just for fun.",
     tags: ["FUN WORK", "CONSUMER"],
-    date: "01.2024"
+    date: "06.2023",
+    link: "https://kwartel.io"
   }
 ];
 
@@ -127,7 +130,8 @@ const LandingPage = ({ goToPage }) => (
         </div>
         <div>
           <p className="mb-1 text-black">EST:</p>
-          <p>2024 (REBRAND)</p>
+          <p>2023</p>
+          <p className="text-gray-400">REBRAND 2025</p>
         </div>
         <div>
           <p className="mb-1 text-black">STATUS:</p>
@@ -230,7 +234,13 @@ const ShowcasePage = () => (
 
           {/* Action */}
           <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0">
-             <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover:text-black transition-colors" />
+            {item.link ? (
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                <ArrowUpRight className="w-6 h-6 text-orange-600 group-hover:text-black transition-colors" />
+              </a>
+            ) : (
+              <ArrowUpRight className="w-6 h-6 text-gray-300 group-hover:text-black transition-colors" />
+            )}
           </div>
         </div>
       ))}
