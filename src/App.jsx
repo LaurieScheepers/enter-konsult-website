@@ -24,35 +24,51 @@ const ForwardEnterIcon = ({ className }) => (
 const PORTFOLIO_ITEMS = [
   {
     id: "01",
-    client: "FINTECH_MIGRATION",
-    title: "Legacy Migration Strategy",
-    desc: "Transformed a 15-year-old banking module into a proprietary IP asset. Cut ties with expensive third-party vendors.",
-    tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
-    date: "12.2024"
+    client: "PROPTECH_GULF",
+    title: "Gulf Real Estate Disruption",
+    desc: "Multi-stakeholder property platform with bank-grade escrow, government API integration, and tamper-proof audit trails.",
+    tags: ["PROPTECH", "IP OWNERSHIP"],
+    date: "11.2024"
   },
   {
     id: "02",
-    client: "LOGISTICS_CORE",
-    title: "The 'Corporate Refugee' Platform",
-    desc: "Bespoke tracking engine for an industry veteran starting a lean operation after 20 years in corporate.",
-    tags: ["STARTUP", "CUSTOM DEV"],
-    date: "09.2024"
+    client: "VISION_FACTORY",
+    title: "Factory Floor Intelligence",
+    desc: "Real-time computer vision tracking worker activity on factory floors. Time-series AI analysis for operational optimisation.",
+    tags: ["AI/ML", "ENTERPRISE"],
+    date: "08.2024"
   },
   {
     id: "03",
-    client: "LINGO_ACCESS",
-    title: "LingoAccess Initiative",
-    desc: "Pro-bono legal information platform serving indigenous mother tongues in rural regions.",
+    client: "MOTHER_TONGUE",
+    title: "Indigenous Language AI",
+    desc: "Foundational language models bringing AI capabilities to underserved African languages. Because access shouldn't depend on speaking English.",
     tags: ["FREE WORK", "ACCESSIBILITY"],
     date: "06.2024"
   },
   {
     id: "04",
-    client: "R_AND_D",
-    title: "Retro-Arcade Engine",
-    desc: "Browser-based physics engine built purely to test WebGL limits. Because we have fun.",
-    tags: ["FUN WORK", "R&D"],
-    date: "01.2025"
+    client: "LEGACY_CLOUD",
+    title: "Desktop to Cloud Migration",
+    desc: "Transformed a 15-year-old Windows application into cloud-licensed SaaS. Device-locked licensing, infrastructure as code.",
+    tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
+    date: "10.2024"
+  },
+  {
+    id: "05",
+    client: "TALENT_MATCH",
+    title: "Niche Professional Matching",
+    desc: "Intelligent matching platform for specialised talent pools. Python-powered algorithm serving enterprise recruiters across Africa.",
+    tags: ["MATCHING ALGO", "ENTERPRISE"],
+    date: "03.2023"
+  },
+  {
+    id: "06",
+    client: "WORD_PLAY",
+    title: "Daily Word Game",
+    desc: "Thousands of daily players. Free. Because some things we build just for fun.",
+    tags: ["FUN WORK", "CONSUMER"],
+    date: "01.2024"
   }
 ];
 
