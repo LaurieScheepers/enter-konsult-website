@@ -357,7 +357,7 @@ const App = () => {
           {/* Text Logo - Heavy Caps + Spaced Title Case */}
           <div className="flex items-baseline gap-1 leading-none">
             <span className="font-black text-xl tracking-tight">ENTER</span>
-            <span className="text-lg font-normal tracking-[0.2em] ml-1">Konsult</span>
+            <span className="text-xl font-light tracking-[0.15em] text-gray-600">Konsult</span>
           </div>
         </div>
 
