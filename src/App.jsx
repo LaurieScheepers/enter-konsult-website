@@ -178,7 +178,7 @@ const LandingPage = ({ goToPage }) => (
         { title: "OWN YOUR IP", desc: "No third-party lockdowns. Assets you control." },
         { title: "TRANSPARENCY", desc: "Clear communication. No technical black boxes." }
       ].map((item, i) => (
-        <div key={i} className="p-8 md:p-12 hover:bg-white transition-colors duration-300">
+        <div key={i} className="p-8 md:p-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-8">
           <div className="font-mono text-xs text-orange-600 mb-4">0{i + 1}</div>
           <h3 className="font-sans font-bold text-xl tracking-tight mb-2">{item.title}</h3>
           <p className="font-sans text-gray-600 leading-relaxed">{item.desc}</p>
@@ -194,7 +194,7 @@ const ShowcasePage = () => (
       <h2 className="text-6xl md:text-7xl font-sans font-bold tracking-tighter leading-[0.85]">
         THE WORK
       </h2>
-      <p className="font-mono text-xs text-gray-500 max-w-xs text-right">
+      <p className="font-mono text-xs text-gray-500 max-w-xs text-left md:text-right">
         BESPOKE SOLUTIONS FITTING UNIQUE BUSINESS VISIONS.
       </p>
     </div>
@@ -203,7 +203,7 @@ const ShowcasePage = () => (
       {PORTFOLIO_ITEMS.map((item) => (
         <div
           key={item.id}
-          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 py-12 hover:bg-white transition-colors duration-300"
+          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-0"
         >
           {/* ID & Date */}
           <div className="md:col-span-2 font-mono text-xs text-gray-400 mb-4 md:mb-0 group-hover:text-orange-600 transition-colors">
@@ -304,7 +304,7 @@ const AboutPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-300">
           {TARGET_AUDIENCE.map((aud) => (
-            <div key={aud.id} className="border-r border-b border-gray-300 p-8 hover:bg-white transition-colors">
+            <div key={aud.id} className="border-r border-b border-gray-300 p-8 hover:bg-white transition-colors -mx-6 px-6 md:mx-0 md:px-8">
               <div className="font-mono text-xs text-orange-600 mb-4">REF: {aud.id}</div>
               <h4 className="font-bold text-lg leading-tight mb-4">{aud.title}</h4>
               <p className="text-sm text-gray-600 leading-relaxed">{aud.text}</p>
