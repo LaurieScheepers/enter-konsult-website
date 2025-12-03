@@ -222,7 +222,17 @@ const ShowcasePage = () => (
   </div>
 );
 
-const AboutPage = () => (
+const AboutPage = () => {
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+    if (res.ok) { setSubmitted(true); form.reset(); }
+  };
+
+  return (
   <div className="animate-slideUp pt-12 pb-24">
     
     {/* Header */}
@@ -287,27 +297,35 @@ const AboutPage = () => (
           </div>
         </div>
 
-        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+        <form className="space-y-6" action="https://formspree.io/f/mrbnkdjd" method="POST" onSubmit={handleSubmit}>
+          <input type="text" name="_gotcha" className="hidden" />
           <div className="space-y-1">
             <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Name / Company</label>
-            <input type="text" className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
+            <input type="text" name="name" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
           </div>
           <div className="space-y-1">
             <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Direct Contact</label>
-            <input type="email" className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
+            <input type="email" name="email" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
           </div>
           <div className="space-y-1">
             <label className="font-mono text-xs uppercase tracking-widest text-gray-500">The Problem</label>
-            <textarea rows="3" className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
+            <textarea name="message" rows="3" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
           </div>
-          <button className="w-full bg-black text-white py-4 font-mono text-xs uppercase tracking-widest hover:bg-orange-600 transition-colors flex justify-center items-center gap-2">
-            Initiate <ForwardEnterIcon className="w-4 h-4" />
-          </button>
+          {submitted ? (
+            <div className="w-full bg-orange-600 text-white py-4 font-mono text-xs uppercase tracking-widest text-center">
+              Message Received. We'll be in touch.
+            </div>
+          ) : (
+            <button type="submit" className="w-full bg-black text-white py-4 font-mono text-xs uppercase tracking-widest hover:bg-orange-600 transition-colors flex justify-center items-center gap-2">
+              Initiate <ForwardEnterIcon className="w-4 h-4" />
+            </button>
+          )}
         </form>
       </div>
     </div>
   </div>
-);
+  );
+};
 
 const App = () => {
   const [activePage, setActivePage] = useState('home');
