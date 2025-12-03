@@ -14,7 +14,7 @@ const ForwardEnterIcon = ({ className }) => (
     strokeLinejoin="miter" 
     className={className}
   >
-    <path d="M4 9 V 15 H 16" />
+    <path d="M4 9 V 15 H 15" />
     <path d="M13 12 L 16 15 L 13 18" />
   </svg>
 );
