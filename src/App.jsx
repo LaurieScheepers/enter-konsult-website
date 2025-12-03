@@ -238,8 +238,7 @@ const ShowcasePage = () => (
           {/* Action */}
           <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0 md:pr-2">
             {item.link ? (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-orange-600 hover:text-black transition-colors group/link">
-                <span className="font-mono text-xs uppercase tracking-wide hidden sm:inline group-hover/link:underline">View Live</span>
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-black hover:scale-110 transition-all">
                 <ExternalLink className="w-5 h-5" />
               </a>
             ) : (
