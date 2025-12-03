@@ -203,7 +203,7 @@ const ShowcasePage = () => (
       {PORTFOLIO_ITEMS.map((item) => (
         <div
           key={item.id}
-          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-0"
+          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4"
         >
           {/* ID & Date */}
           <div className="md:col-span-2 font-mono text-xs text-gray-400 mb-4 md:mb-0 group-hover:text-orange-600 transition-colors">
@@ -236,14 +236,14 @@ const ShowcasePage = () => (
           </div>
 
           {/* Action */}
-          <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0">
+          <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0 md:pr-2">
             {item.link ? (
               <a href={item.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-orange-600 hover:text-black transition-colors group/link">
                 <span className="font-mono text-xs uppercase tracking-wide hidden sm:inline group-hover/link:underline">View Live</span>
                 <ExternalLink className="w-5 h-5" />
               </a>
             ) : (
-              <span className="font-mono text-xs text-gray-300 uppercase tracking-wide">Private</span>
+              <span className="font-mono text-xs text-gray-300 uppercase tracking-wide">Internal</span>
             )}
           </div>
         </div>
