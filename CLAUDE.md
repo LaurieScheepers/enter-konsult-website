@@ -78,7 +78,7 @@ public/
 ### Key Patterns
 
 1. **Swiss Grid**: 12-column grid with asymmetric content placement
-2. **Keyboard Metaphors**: ENTER button (right-aligned), PROJECTS (spacebar, full-width mobile)
+2. **Keyboard Metaphors**: ENTER button (right-aligned), SHOWCASE (spacebar, full-width mobile)
 3. **Tension**: Right-align headings vs left-align subtitles on mobile
 4. **Hover States**: `translate-x-2`, `tracking-wider`, colour transitions
 
@@ -126,7 +126,7 @@ Full-width 1px grey line separator.
 
 - Hero: 2-column grid (metadata left, heading right)
 - Heading asymmetry: Right-aligned "WE SPEAK BUSINESS.", split "NOT JUST / CODE."
-- Full-width PROJECTS button (spacebar metaphor)
+- Full-width SHOWCASE button (spacebar metaphor)
 - Remove vertical borders on target audience matrix
 - `last:border-b-0` to clean list endings
 

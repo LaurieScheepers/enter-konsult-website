@@ -186,7 +186,7 @@ const LandingPage = ({ goToPage }) => (
                 onClick={() => goToPage('showcase')}
                 className="w-full md:w-auto border border-black text-black px-8 py-4 hover:bg-black hover:text-white transition-colors duration-300"
               >
-                <span className="font-mono text-sm tracking-widest uppercase">PROJECTS</span>
+                <span className="font-mono text-sm tracking-widest uppercase">SHOWCASE</span>
               </button>
 
               {/* Tagline */}
