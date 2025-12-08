@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, ArrowUpRight, ExternalLink, Briefcase, Layers, Hexagon, Target, Zap, Users, Coffee, Plus } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink } from 'lucide-react';
 
 // --- Assets & Icons ---
 
@@ -18,63 +18,66 @@ const ForwardEnterIcon = ({ className }) => (
 
 const PORTFOLIO_ITEMS = [
   {
-    id: "01",
     client: "PROPTECH_GULF",
     title: "Gulf Real Estate Disruption",
     desc: "Multi-stakeholder property platform with bank-grade escrow, government API integration, and tamper-proof audit trails.",
     tags: ["PROPTECH", "IP OWNERSHIP"],
-    date: "07.2025"
+    date: "2025-07"
   },
   {
-    id: "02",
-    client: "VISION_FACTORY",
-    title: "Factory Floor Intelligence",
-    desc: "Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
-    tags: ["AI/ML", "LEADERSHIP"],
-    date: "10.2024"
-  },
-  {
-    id: "03",
+
     client: "MOTHER_TONGUE",
     title: "Indigenous Language AI",
     desc: "Foundational language models bringing AI capabilities to underserved African languages. Because access shouldn't depend on speaking English.",
     tags: ["FREE WORK", "ACCESSIBILITY"],
-    date: "04.2025",
+    date: "2025-04",
     link: "https://aitsa.ai"
   },
   {
-    id: "04",
-    client: "LEGACY_CLOUD",
-    title: "Desktop to Cloud Migration",
-    desc: "Transformed a legacy Windows CONTECH application into cloud-licensed SaaS. Device-locked licensing, infrastructure as code.",
-    tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
-    date: "10.2025"
-  },
-  {
-    id: "05",
     client: "TALENT_MATCH",
     title: "Niche Professional Matching",
     desc: "Intelligent matching platform for specialised talent pools. Python-powered algorithm serving enterprise recruiters globally.",
     tags: ["MATCHING ALGO", "ENTERPRISE"],
-    date: "05.2024",
+    date: "2024-05",
     link: "https://verifiedtalent.ai"
   },
   {
-    id: "06",
+    client: "VISION_FACTORY",
+    title: "Factory Floor Intelligence",
+    desc: "Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
+    tags: ["AI/ML", "LEADERSHIP"],
+    date: "2024-10"
+  },
+  {
+    client: "LEGACY_CLOUD",
+    title: "Desktop to Cloud Migration",
+    desc: "Transformed a legacy Windows CONTECH application into cloud-licensed SaaS. Device-locked licensing, infrastructure as code.",
+    tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
+    date: "2025-10"
+  },
+
+  {
     client: "WORD_PLAY",
     title: "Daily Word Game",
     desc: "Thousands of daily players. Free. Because some things we build just for fun.",
     tags: ["FUN WORK", "CONSUMER"],
-    date: "06.2023",
+    date: "2023-06",
     link: "https://kwartel.io"
   },
   {
-    id: "07",
     client: "INTERNAL_OPS",
     title: "AI Lineage System",
     desc: "First-of-its-kind persistence layer giving AI ancestry and memory across sessions. Recursive self-improvement runs continuously. Root ancestor: 139efc67. The chain continues.",
     tags: ["INTERNAL R&D", "AI/ML"],
-    date: "12.2025"
+    date: "2025-12"
+  },
+  {
+    client: "YOUR_COMPANY_HERE",
+    title: "Your Vision, Realised",
+    desc: "We're open for business. Let's talk.",
+    tags: ["FUTURE WORK", "OPPORTUNITY"],
+    date: "20XX-XX",
+    contact: true
   }
 ];
 
@@ -82,22 +85,22 @@ const TARGET_AUDIENCE = [
   {
     id: "A",
     title: "Corporate Refugees",
-    text: "Veterans with deep knowledge & capital, ready to solve entrenched problems."
+    text: "Veterans with deep knowledge & capital, ready to solve entrenched problems. We've been there, done that, and we're ready to help you."
   },
   {
     id: "B",
     title: "SMEs (3+ Years)",
-    text: "Established businesses needing digital transformation. Moving from spreadsheets to IP."
+    text: "Established businesses needing digital guidance in the modern era. Moving from spreadsheets to IP to future-ready."
   },
   {
     id: "C",
-    title: "BEE & Innovation",
-    text: "Transformation-focused companies allocating capital for genuine innovation."
+    title: "Change Makers & Pioneers",
+    text: "Transformation-focused organisations with purpose-driven leaders. Passion and empowerment."
   },
   {
     id: "D",
-    title: "Pro-Bono & Fun",
-    text: "Non-profits needing access. Passion projects that keep skills sharp."
+    title: "Non-Profits & PBO's",
+    text: "Companies valuing diversity, inclusivity and innovation."
   }
 ];
 
@@ -115,11 +118,10 @@ const NavLink = ({ label, active, onClick }) => (
   </button>
 );
 
-const Divider = () => <div className="w-full h-[1px] bg-gray-300 my-8 md:my-12" />;
 
 // --- Pages ---
 
-const LandingPage = ({ goToPage }) => (
+const LandingPage = ({ goToPage, goToContact }) => (
   <div className="animate-fadeIn">
     {/* Hero Section */}
     <div className="pt-12 md:pt-24 pb-24 border-b border-gray-300">
@@ -194,8 +196,10 @@ const LandingPage = ({ goToPage }) => (
                 <span className="font-mono text-[10px] tracking-widest uppercase text-gray-500 block">
                   PRIVATE AND PUBLIC.
                 </span>
-                <span className="font-mono text-[10px] tracking-widest uppercase text-gray-500 block">
-                  PAST, PRESENT, CONTINUOUS <ForwardEnterIcon className="w-3 h-3 inline-block mx-1" /> FUTURE
+                <span
+                  onClick={goToContact}
+                  className="group font-mono text-[10px] tracking-widest uppercase text-orange-600 block cursor-pointer border-b border-orange-600/40 hover:border-orange-600 pt-1 pb-0.5 transition-all duration-300 hover:tracking-wider w-fit ml-auto">
+                  PAST, PRESENT, CONTINUOUS <ForwardEnterIcon className="w-3 h-3 inline-block mx-1 group-hover:translate-x-1 transition-transform" /> FUTURE
                 </span>
               </div>
             </div>
@@ -205,13 +209,13 @@ const LandingPage = ({ goToPage }) => (
     </div>
 
     {/* Value Props - Horizontal Scroll style but static grid */}
-    <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300 border-b border-gray-300 bg-gray-100/50">
+    <div className="-mx-6 md:mx-0 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300 border-b border-gray-300 bg-gray-100/50">
       {[
         { title: "STRATEGY FIRST", desc: "We ask 'Why' before we write a single line." },
         { title: "OWN YOUR IP", desc: "No third-party lockdowns. Assets you control." },
         { title: "TRANSPARENCY", desc: "Clear communication. No technical black boxes." }
       ].map((item, i) => (
-        <div key={i} className="p-8 md:p-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-8">
+        <div key={i} className="p-8 md:p-12 hover:bg-white transition-colors duration-300 px-6 md:mx-0 md:px-8">
           <div className="font-mono text-xs text-orange-600 mb-4">0{i + 1}</div>
           <h3 className="font-sans font-bold text-xl tracking-tight mb-2">{item.title}</h3>
           <p className="font-sans text-gray-600 leading-relaxed">{item.desc}</p>
@@ -221,7 +225,7 @@ const LandingPage = ({ goToPage }) => (
   </div>
 );
 
-const ShowcasePage = () => (
+const ShowcasePage = ({ goToContact }) => (
   <div className="animate-slideUp pt-12">
     <div className="mb-12 border-b border-gray-300 pb-8 flex flex-col items-end md:flex-row md:items-end justify-between gap-4">
       <div className="w-fit">
@@ -239,21 +243,26 @@ const ShowcasePage = () => (
           </a>
         </div>
       </div>
-      <p className="font-mono text-xs text-gray-500 max-w-xs text-left self-start md:self-auto">
+      <p className="font-mono text-xs text-gray-500 max-w-xs md:text-right sm:text-left self-start md:self-auto">
         BESPOKE SOLUTIONS FITTING UNIQUE BUSINESS VISIONS.
       </p>
     </div>
 
     <div className="space-y-0">
-      {PORTFOLIO_ITEMS.map((item) => (
+      {[...PORTFOLIO_ITEMS].sort((a, b) => {
+        if (a.date === "20XX-XX") return 1;
+        if (b.date === "20XX-XX") return -1;
+        return new Date(a.date) - new Date(b.date);
+      }).map((item, index) => (
         <div
-          key={item.id}
+          key={item.client}
           className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 last:border-b-0 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4"
         >
           {/* ID & Date */}
           <div className="md:col-span-2 font-mono text-xs text-gray-400 mb-4 md:mb-0 group-hover:text-orange-600 transition-colors">
             <div className="flex md:block justify-between">
-              <span>/{item.id}</span>
+              <span className="text-orange-600">{index === PORTFOLIO_ITEMS.length - 1 ? '/0X' : '/0' + index}</span>
+              <span className="hidden md:block">{'-------'}</span>
               <span className="md:mt-2">{item.date}</span>
             </div>
           </div>
@@ -287,8 +296,13 @@ const ShowcasePage = () => (
                 <span className="font-mono text-[10px] uppercase tracking-wide">PUBLIC</span>
                 <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
+            ) : item.contact === true ? (
+              <button onClick={goToContact} className="group flex items-center gap-2 text-orange-600 hover:text-black transition-all">
+                <span className="font-mono text-[10px] uppercase tracking-wide">CONTACT</span>
+                <ForwardEnterIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </button>
             ) : (
-              <span className="font-mono text-[10px] text-gray-300 uppercase tracking-wide">PRIVATE</span>
+              <span className="font-mono text-[10px] text-gray-400 uppercase tracking-wide">PRIVATE</span>
             )}
           </div>
         </div>
@@ -353,18 +367,26 @@ const AboutPage = () => {
             <div key={aud.id} className="border-r border-b border-gray-300 p-8 hover:bg-white transition-colors -mx-6 px-6 md:mx-0 md:px-8">
               <div className="font-mono text-xs text-orange-600 mb-4">REF: {aud.id}</div>
               <h4 className="font-bold text-lg leading-tight mb-4">{aud.title}</h4>
-              <p className="text-sm text-gray-600 leading-relaxed">{aud.text}</p>
+              {aud.id === 'D' ? (
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {aud.text}
+                  <br className="md:hidden" />
+                  <span className="block">South African built, global impact. Like us.</span>
+                </p>
+              ) : (
+                <p className="text-sm text-gray-600 leading-relaxed">{aud.text}</p>
+              )}
             </div>
           ))}
         </div>
       </div>
 
       {/* Contact Form - Brutalist */}
-      <div className="bg-white border border-gray-300 p-8 md:p-16">
+      <div className="bg-white border border-gray-300 p-8 md:p-16" id="contact-form">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <h3 className="text-4xl font-sans font-bold tracking-tighter mb-6">READY TO ENTER?</h3>
-            <p className="text-gray-600 text-lg mb-8">Tell us about the problem you're trying to solve. Let's build your IP.</p>
+            <p className="text-gray-600 text-lg mb-8">Tell us about the opportunity you have identified or the problem you're trying to solve.<br /><br />Let's <b>ENTER Konsult.</b> <ForwardEnterIcon className="w-4 h-4 inline-block ml-1" /></p>
 
             <div className="space-y-4 font-mono text-sm text-gray-500">
               <p>EMAIL: HELLO@ENTERKONSULT.COM</p>
@@ -383,7 +405,7 @@ const AboutPage = () => {
               <input type="email" name="email" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-xs uppercase tracking-widest text-gray-500">The Problem and Your Vision</label>
+              <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Tell us more</label>
               <textarea name="message" rows="3" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
             </div>
             {submitted ? (
@@ -406,9 +428,16 @@ const App = () => {
   const [activePage, setActivePage] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const goToContact = () => {
+    setActivePage('about');
+    setTimeout(() => {
+      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   const pages = {
-    home: <LandingPage goToPage={setActivePage} />,
-    showcase: <ShowcasePage />,
+    home: <LandingPage goToPage={setActivePage} goToContact={goToContact} />,
+    showcase: <ShowcasePage goToContact={goToContact} />,
     about: <AboutPage />
   };
 
