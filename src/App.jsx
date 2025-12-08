@@ -122,50 +122,83 @@ const Divider = () => <div className="w-full h-[1px] bg-gray-300 my-8 md:my-12" 
 const LandingPage = ({ goToPage }) => (
   <div className="animate-fadeIn">
     {/* Hero Section */}
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-12 md:pt-24 pb-24 border-b border-gray-300">
+    <div className="pt-12 md:pt-24 pb-24 border-b border-gray-300">
 
-      {/* Left Col: Metadata */}
-      <div className="lg:col-span-3 font-mono text-xs space-y-6 text-gray-500 pt-2">
-        <div>
-          <p className="mb-1 text-black">CONTEXT:</p>
-          <p>BUSINESS STRATEGY</p>
-          <p>TECH CONSULTANCY</p>
+      {/* Section A: Metadata + Heading Grid */}
+      <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-8">
+        {/* Left Col: Metadata */}
+        <div className="col-span-1 lg:col-span-3 font-mono text-xs space-y-6 text-gray-500 pt-2">
+          <div>
+            <p className="mb-1 text-black">CONTEXT:</p>
+            <p>BUSINESS STRATEGY</p>
+            <p>TECH CONSULTANCY</p>
+          </div>
+          <div>
+            <p className="mb-1 text-black">EST:</p>
+            <p>2023</p>
+            <p className="text-gray-400">REBRAND 2025</p>
+          </div>
+          <div>
+            <p className="mb-1 text-black">STATUS:</p>
+            <p className="text-orange-600 flex items-center gap-2">
+              <span className="w-2 h-2 bg-orange-600 rounded-full animate-pulse" />
+              ACCEPTING CLIENTS
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="mb-1 text-black">EST:</p>
-          <p>2023</p>
-          <p className="text-gray-400">REBRAND 2025</p>
-        </div>
-        <div>
-          <p className="mb-1 text-black">STATUS:</p>
-          <p className="text-orange-600 flex items-center gap-2">
-            <span className="w-2 h-2 bg-orange-600 rounded-full animate-pulse" />
-            ACCEPTING CLIENTS
-          </p>
+
+        {/* Right Col: Heading Only */}
+        <div className="col-span-1 lg:col-span-9">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-sans font-bold tracking-tighter leading-[0.95] lg:leading-[0.85] text-black text-right lg:text-left">
+            WE SPEAK <br />
+            BUSINESS. <br />
+            <span className="text-gray-400">
+              <span className="lg:hidden block">NOT JUST</span>
+              <span className="lg:hidden block">CODE.</span>
+              <span className="hidden lg:inline">NOT JUST CODE.</span>
+            </span>
+          </h1>
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="lg:col-span-9 space-y-12">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-sans font-bold tracking-tighter leading-[0.85] text-black">
-          WE SPEAK <br />
-          BUSINESS. <br />
-          <span className="text-gray-400">NOT JUST CODE.</span>
-        </h1>
+      {/* Section B: Description + CTAs (full width on mobile) */}
+      <div className="lg:grid lg:grid-cols-12 lg:gap-8 mt-12">
+        <div className="lg:col-start-4 lg:col-span-9">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <p className="text-xl md:text-2xl leading-tight font-sans font-medium text-gray-800 max-w-md">
+              A Technology Consultancy that solves business problems. We help you own your IP and control your future.
+            </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <p className="text-xl md:text-2xl leading-tight font-sans font-medium text-gray-800 max-w-md">
-            A Technology Consultancy that solves business problems. We help you own your IP and control your future.
-          </p>
+            <div className="flex flex-col justify-end h-full gap-4 w-full md:w-auto">
+              {/* Enter key - right aligned on mobile (keyboard position) */}
+              <div className="flex justify-end">
+                <button
+                  onClick={() => goToPage('about')}
+                  className="group flex items-center gap-4 bg-black text-white px-8 py-4 hover:bg-orange-600 transition-colors duration-300 shadow-xl"
+                >
+                  <span className="font-mono text-base tracking-widest uppercase">ENTER</span>
+                  <ForwardEnterIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
 
-          <div className="flex flex-col items-start justify-end h-full">
-            <button
-              onClick={() => goToPage('about')}
-              className="group flex items-center gap-4 bg-black text-white px-8 py-4 hover:bg-orange-600 transition-colors duration-300 shadow-xl"
-            >
-              <span className="font-mono text-sm tracking-widest uppercase">ENTER</span>
-              <ForwardEnterIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+              {/* Spacebar - full width on mobile (keyboard metaphor) */}
+              <button
+                onClick={() => goToPage('showcase')}
+                className="w-full md:w-auto border border-black text-black px-8 py-4 hover:bg-black hover:text-white transition-colors duration-300"
+              >
+                <span className="font-mono text-sm tracking-widest uppercase">PROJECTS</span>
+              </button>
+
+              {/* Tagline */}
+              <div className="text-right">
+                <span className="font-mono text-[10px] tracking-widest uppercase text-gray-500 block">
+                  PRIVATE AND PUBLIC.
+                </span>
+                <span className="font-mono text-[10px] tracking-widest uppercase text-gray-500 block">
+                  PAST, PRESENT, CONTINUOUS <ForwardEnterIcon className="w-3 h-3 inline-block mx-1" /> FUTURE
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -190,11 +223,23 @@ const LandingPage = ({ goToPage }) => (
 
 const ShowcasePage = () => (
   <div className="animate-slideUp pt-12">
-    <div className="mb-12 border-b border-gray-300 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
-      <h2 className="text-6xl md:text-7xl font-sans font-bold tracking-tighter leading-[0.85]">
-        THE WORK
-      </h2>
-      <p className="font-mono text-xs text-gray-500 max-w-xs text-left md:text-right">
+    <div className="mb-12 border-b border-gray-300 pb-8 flex flex-col items-end md:flex-row md:items-end justify-between gap-4">
+      <div className="w-fit">
+        <h2 className="text-6xl md:text-7xl font-sans font-bold tracking-tighter leading-[0.85]">
+          THE WORK
+        </h2>
+        <div className="text-right mt-2">
+          <a
+            href="https://www.codetonight.co.za"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs text-orange-600 italic border-b border-orange-600/40 hover:border-orange-600 pb-0.5 transition-all duration-300 hover:tracking-wider"
+          >
+            et alia
+          </a>
+        </div>
+      </div>
+      <p className="font-mono text-xs text-gray-500 max-w-xs text-left self-start md:self-auto">
         BESPOKE SOLUTIONS FITTING UNIQUE BUSINESS VISIONS.
       </p>
     </div>
@@ -203,7 +248,7 @@ const ShowcasePage = () => (
       {PORTFOLIO_ITEMS.map((item) => (
         <div
           key={item.id}
-          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4"
+          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 last:border-b-0 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4"
         >
           {/* ID & Date */}
           <div className="md:col-span-2 font-mono text-xs text-gray-400 mb-4 md:mb-0 group-hover:text-orange-600 transition-colors">
@@ -238,11 +283,12 @@ const ShowcasePage = () => (
           {/* Action */}
           <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0 md:pr-2">
             {item.link ? (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-black hover:scale-110 transition-all">
-                <ExternalLink className="w-5 h-5" />
+              <a href={item.link} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-orange-600 hover:text-black transition-all">
+                <span className="font-mono text-[10px] uppercase tracking-wide">PUBLIC</span>
+                <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             ) : (
-              <span className="font-mono text-xs text-gray-300 uppercase tracking-wide">Private</span>
+              <span className="font-mono text-[10px] text-gray-300 uppercase tracking-wide">PRIVATE</span>
             )}
           </div>
         </div>
@@ -297,12 +343,12 @@ const AboutPage = () => {
 
       {/* Audience Grid - Swiss Style */}
       <div className="mb-24">
-        <div className="flex justify-between items-end border-b border-gray-300 pb-4 mb-4">
+        <div className="flex justify-between items-end pb-4 mb-4">
           <h3 className="font-mono text-xs uppercase tracking-widest">Ideally Suited For</h3>
           <span className="font-mono text-xs text-gray-400">TARGET_AUDIENCE_MATRIX</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-gray-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t md:border-l border-gray-300">
           {TARGET_AUDIENCE.map((aud) => (
             <div key={aud.id} className="border-r border-b border-gray-300 p-8 hover:bg-white transition-colors -mx-6 px-6 md:mx-0 md:px-8">
               <div className="font-mono text-xs text-orange-600 mb-4">REF: {aud.id}</div>
@@ -333,11 +379,11 @@ const AboutPage = () => {
               <input type="text" name="name" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Direct Contact</label>
+              <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Direct Contact Email</label>
               <input type="email" name="email" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
             </div>
             <div className="space-y-1">
-              <label className="font-mono text-xs uppercase tracking-widest text-gray-500">The Problem</label>
+              <label className="font-mono text-xs uppercase tracking-widest text-gray-500">The Problem and Your Vision</label>
               <textarea name="message" rows="3" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
             </div>
             {submitted ? (
@@ -432,9 +478,8 @@ const App = () => {
 
       {/* Footer */}
       <footer className="border-t border-gray-300 py-8 bg-[#EAEAEA] px-6 md:px-12">
-        <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center font-mono text-xs text-gray-500">
+        <div className="max-w-screen-xl mx-auto flex justify-center items-center font-mono text-xs text-gray-500">
           <p>© 2025 ENTER KONSULT</p>
-          <p className="mt-2 md:mt-0">FORMERLY CODETONIGHT</p>
         </div>
       </footer>
     </div>
