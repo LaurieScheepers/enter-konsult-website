@@ -1,209 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Commitments | ENTER Konsult</title>
-  <meta name="description" content="ENTER Konsult's commitments to social impact, community building, and ethical technology practice.">
+  <meta name="description"
+    content="ENTER Konsult's commitments to social impact, community building, and ethical technology practice.">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: #EAEAEA;
-      color: #000;
-      min-height: 100vh;
-      line-height: 1.5;
     }
-    .container {
-      max-width: 56rem;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 3rem;
-    }
-    @media (min-width: 768px) {
-      .container { padding: 5rem 1.5rem; }
-    }
-    a { text-decoration: none; }
-    .header {
-      margin-bottom: 4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .header img { width: 2rem; height: 2rem; }
-    .logo-text {
-      font-size: 1.25rem;
-      font-weight: 700;
+
+    .tracking-tighter {
       letter-spacing: -0.05em;
     }
-    .logo-konsult { color: #6b7280; }
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      letter-spacing: -0.05em;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-    @media (min-width: 768px) {
-      h1 { font-size: 3.75rem; }
-    }
-    .subtitle {
-      color: #4b5563;
-      font-size: 1.125rem;
-      margin-bottom: 4rem;
-      max-width: 42rem;
-    }
-    .sections { display: flex; flex-direction: column; gap: 4rem; }
-    section { }
-    .section-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      background-color: #ea580c;
-      margin-top: 0.75rem;
-      flex-shrink: 0;
-    }
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.05em;
-    }
-    @media (min-width: 768px) {
-      h2 { font-size: 1.875rem; }
-    }
-    .section-content { margin-left: 1.5rem; }
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .section-content p {
-      color: #374151;
-      margin-bottom: 1rem;
-      max-width: 42rem;
-    }
-    .section-content a {
-      color: #ea580c;
-      font-weight: 500;
-    }
-    .section-content a:hover { text-decoration: underline; }
-    .mono {
-      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #6b7280;
-    }
-    .divider {
-      border: none;
-      border-top: 1px solid #d1d5db;
-    }
-    .work-items { display: flex; flex-direction: column; gap: 1.5rem; }
-    .work-item h3 { margin-bottom: 0.25rem; }
-    .work-item p { margin-bottom: 0; }
-    footer {
-      margin-top: 5rem;
-      padding-top: 2rem;
-      border-top: 1px solid #d1d5db;
-    }
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    @media (min-width: 768px) {
-      .footer-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-    .footer-text {
-      color: #6b7280;
-      font-size: 0.875rem;
-    }
-    .footer-link {
-      color: #ea580c;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    .footer-link:hover { text-decoration: underline; }
   </style>
 </head>
-<body>
-  <div class="container">
 
-    <header class="header">
-      <a href="/" style="display: flex; align-items: center; gap: 0.75rem;">
-        <img src="/favicon.svg" alt="ENTER Konsult">
-        <span class="logo-text">
-          <span>ENTER</span><span class="logo-konsult">Konsult</span>
+<body class="min-h-screen font-sans text-black">
+  <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+
+    <header class="mb-16">
+      <a href="/" class="inline-flex items-center gap-3 group">
+        <img src="/favicon.svg" alt="ENTER Konsult" class="w-8 h-8">
+        <span class="text-xl font-bold tracking-tighter">
+          <span class="text-black">ENTER</span><span class="text-gray-500">Konsult</span>
         </span>
       </a>
     </header>
 
     <main>
-      <h1>Our Commitments</h1>
-      <p class="subtitle">What we build. Who we support. How we operate.</p>
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Our Commitments</h1>
+      <p class="text-gray-600 text-lg mb-16 max-w-2xl">
+        What we build. Who we support. How we operate.
+      </p>
 
-      <div class="sections">
+      <div class="space-y-16">
 
         <section>
-          <div class="section-header">
-            <div class="dot"></div>
-            <h2>Social Impact</h2>
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-2 h-2 bg-orange-600 mt-3 flex-shrink-0"></div>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tighter">Social Impact</h2>
           </div>
-          <div class="section-content">
-            <h3>AITSA.ai</h3>
-            <p>
-              We built and maintain <a href="https://aitsa.ai" target="_blank" rel="noopener">AITSA.ai</a> — free AI tools for Afrikaans speakers. Language technology shouldn't be limited to dominant languages. This is our contribution to preserving and evolving South African languages in the digital age.
+          <div class="ml-6">
+            <h3 class="text-xl font-bold mb-2">AITSA.ai</h3>
+            <p class="text-gray-700 mb-4 max-w-2xl">
+              We built and maintain <a href="https://aitsa.ai" target="_blank" rel="noopener"
+                class="text-orange-600 hover:underline font-medium">AITSA.ai</a> — free AI tools for Afrikaans speakers.
+              Language technology shouldn't be limited to dominant languages. This is our contribution to preserving and
+              evolving South African languages in the digital age.
             </p>
-            <p class="mono">Free. Open. Ongoing.</p>
+            <p class="font-mono text-xs text-gray-500 uppercase tracking-widest">
+              Free. Open. Ongoing.
+            </p>
           </div>
         </section>
 
-        <hr class="divider">
+        <div class="border-t border-gray-300"></div>
 
         <section>
-          <div class="section-header">
-            <div class="dot"></div>
-            <h2>Community</h2>
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-2 h-2 bg-orange-600 mt-3 flex-shrink-0"></div>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tighter">Community</h2>
           </div>
-          <div class="section-content">
-            <h3>The Founders Collab</h3>
-            <p>
-              ENTER Konsult founder Laurie Scheepers is a founding member of The Founders Collab — a community of 500+ South African tech entrepreneurs. We support the next generation of founders through mentorship, knowledge sharing, and practical guidance.
+          <div class="ml-6">
+            <h3 class="text-xl font-bold mb-2">The Founders Collab</h3>
+            <p class="text-gray-700 mb-4 max-w-2xl">
+              ENTER Konsult founder Laurie Scheepers has been a member of The Founders Collab and The Open Collab
+              network since the early days post their launch. The community consists of over 500+ South African tech
+              entrepreneurs. We support the next generation of founders through mentorship, knowledge sharing, and
+              practical guidance.
             </p>
-            <p class="mono">Building ecosystems, not just companies.</p>
+            <p class="font-mono text-xs text-gray-500 uppercase tracking-widest">
+              Building ecosystems, not just companies.
+            </p>
           </div>
         </section>
 
-        <hr class="divider">
+        <div class="border-t border-gray-300"></div>
 
         <section>
-          <div class="section-header">
-            <div class="dot"></div>
-            <h2>How We Work</h2>
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-2 h-2 bg-orange-600 mt-3 flex-shrink-0"></div>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tighter">How We Work</h2>
           </div>
-          <div class="section-content">
-            <div class="work-items">
-              <div class="work-item">
-                <h3>IP Ownership</h3>
-                <p>Clients own everything we build. No vendor lock-in. No hostage code.</p>
-              </div>
-              <div class="work-item">
-                <h3>Remote-First</h3>
-                <p>We work where we're most effective. Results matter more than presence.</p>
-              </div>
-              <div class="work-item">
-                <h3>Honest Practice</h3>
-                <p>We say no to work that won't add value. Technology doesn't fix broken strategy.</p>
-              </div>
+          <div class="ml-6 space-y-6">
+            <div>
+              <h3 class="font-bold mb-1">IP Ownership</h3>
+              <p class="text-gray-700">Clients own everything we build. No vendor lock-in. No hostage code.</p>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Remote-First</h3>
+              <p class="text-gray-700">We work where we're most effective. Results matter more than presence.</p>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Honest Practice</h3>
+              <p class="text-gray-700">We say no to work that won't add value. Technology doesn't fix broken strategy.
+              </p>
             </div>
           </div>
         </section>
@@ -211,13 +107,18 @@
       </div>
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <p class="footer-text">South African built. Global impact.</p>
-        <a href="/" class="footer-link">Back to enterkonsult.com</a>
+    <footer class="mt-20 pt-8 border-t border-gray-300">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <p class="text-gray-500 text-sm">
+          South African built. Global impact.
+        </p>
+        <a href="/" class="text-orange-600 hover:underline text-sm font-medium">
+          Back to enterkonsult.com
+        </a>
       </div>
     </footer>
 
   </div>
 </body>
+
 </html>
