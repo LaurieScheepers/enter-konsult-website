@@ -9,10 +9,11 @@
 
 ## CURRENT STATE
 
-**Status**: Production Ready (v2 Styling Complete)
+**Status**: Production Ready + LinkedIn Launch Complete
 **Branch**: main
 **Deployment**: Vercel (auto-deploy on push)
-**Last Updated**: 2025-12-08
+**Last Updated**: 2025-12-15
+**Latest Commit**: 6764787
 
 ## TECH STACK
 
@@ -36,24 +37,27 @@ npm run preview  # Preview production build
 
 | Environment | URL |
 |-------------|-----|
-| Production | https://enter-konsult-website.vercel.app |
+| Production | https://enterkonsult.com |
+| Pledge Page | https://enterkonsult.com/pledge |
+| Vercel | https://enter-konsult-website.vercel.app |
 | Legacy | https://www.codetonight.co.za |
 | Form Backend | https://formspree.io/f/mrbnkdjd |
 | Repository | https://github.com/LaurieScheepers/enter-konsult-website |
 
 ## ARCHITECTURE
 
-```
+```text
 src/
   App.jsx           # Single-file React app (pages, components, data)
   index.css         # Tailwind imports + custom animations
   main.jsx          # React entry point
 public/
   images/           # Static assets
+  pledge/           # Static pledge page (LinkedIn commitments)
   *.svg, *.ico      # Favicon set
 ```
 
-**Design Decision**: Single-file architecture for simplicity. All pages (Landing, Showcase, About) and components in one file. No routing library - state-driven navigation.
+**Design Decision**: Single-file architecture for simplicity. All pages (Landing, Showcase, About) and components in one file. No routing library - state-driven navigation. Static HTML pages in public/ for standalone content (e.g., /pledge).
 
 ## DESIGN SYSTEM
 
@@ -140,3 +144,23 @@ Full-width 1px grey line separator.
 ## DEPLOYMENT
 
 Push to `main` triggers Vercel auto-deploy. No staging environment - production direct.
+
+## RECENT ADDITIONS (2025-12)
+
+### Pledge Page (`/pledge`)
+
+Static HTML page for LinkedIn commitments. Located at `public/pledge/index.html`.
+
+**Sections**:
+
+1. **Social Impact** - AITSA.ai (free Afrikaans AI)
+2. **Community** - The Founders Collab membership
+3. **How We Work** - IP ownership, remote-first, honest practice
+
+Uses Tailwind CDN for standalone styling. Swiss Nihilist aesthetic with orange accents.
+
+### LinkedIn Launch Assets
+
+- `public/linkedin-logo.png` (300x300)
+- `public/linkedin-banner.png` (1128x191)
+- Company page copy in `next_up.md`

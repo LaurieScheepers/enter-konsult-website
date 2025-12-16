@@ -199,7 +199,7 @@ const LandingPage = ({ goToPage, goToContact }) => (
                 <span
                   onClick={goToContact}
                   className="group font-mono text-[10px] tracking-widest uppercase text-orange-600 block cursor-pointer border-b border-orange-600/40 hover:border-orange-600 pt-1 pb-0.5 transition-all duration-300 hover:tracking-wider w-fit ml-auto">
-                  PAST, PRESENT, CONTINUOUS <ForwardEnterIcon className="w-3 h-3 inline-block mx-1 group-hover:translate-x-1 transition-transform" /> FUTURE
+                  LET'S BUILD <ForwardEnterIcon className="w-3 h-3 inline-block ml-1 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
             </div>
@@ -221,6 +221,11 @@ const LandingPage = ({ goToPage, goToContact }) => (
           <p className="font-sans text-gray-600 leading-relaxed">{item.desc}</p>
         </div>
       ))}
+    </div>
+
+    {/* Trust Signal */}
+    <div className="font-mono text-[10px] tracking-widest uppercase text-gray-400 text-right mt-8 px-6 md:px-0">
+      7 LIVE SYSTEMS / 4 CONTINENTS / 0 VENDOR LOCK-INS
     </div>
   </div>
 );
@@ -256,7 +261,7 @@ const ShowcasePage = ({ goToContact }) => (
       }).map((item, index) => (
         <div
           key={item.client}
-          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 last:border-b-0 py-12 hover:bg-white transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4"
+          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 last:border-b-0 py-12 hover:bg-white hover:border-l-2 hover:border-l-orange-600 hover:pl-4 transition-all duration-300 -mx-6 px-6 md:mx-0 md:px-4"
         >
           {/* ID & Date */}
           <div className="md:col-span-2 font-mono text-xs text-gray-400 mb-4 md:mb-0 group-hover:text-orange-600 transition-colors">
@@ -345,10 +350,10 @@ const AboutPage = () => {
           <div className="space-y-4">
             <h3 className="font-mono text-xs uppercase tracking-widest border-b border-gray-700 pb-2">Our Philosophy</h3>
             <ul className="space-y-2 font-mono text-sm">
-              <li className="flex gap-2"><span className="text-orange-600">01</span> We ask Why</li>
-              <li className="flex gap-2"><span className="text-orange-600">02</span> We solve problems</li>
-              <li className="flex gap-2"><span className="text-orange-600">03</span> We have skills</li>
-              <li className="flex gap-2"><span className="text-orange-600">04</span> We have fun</li>
+              <li className="flex gap-2"><span className="text-orange-600">01</span> We will not build what should not exist</li>
+              <li className="flex gap-2"><span className="text-orange-600">02</span> We transform complexity - KISS is paramount</li>
+              <li className="flex gap-2"><span className="text-orange-600">03</span> We enforce strict quality control</li>
+              <li className="flex gap-2"><span className="text-orange-600">04</span> We do what is RIGHT</li>
             </ul>
           </div>
           <ForwardEnterIcon className="w-32 h-32 self-end opacity-20" />
@@ -381,6 +386,29 @@ const AboutPage = () => {
         </div>
       </div>
 
+      {/* How We Engage - Process Section */}
+      <div className="mb-24 border-t border-gray-300 pt-16">
+        <div className="flex justify-between items-end pb-4 mb-8">
+          <h3 className="font-mono text-xs uppercase tracking-widest">How We Engage</h3>
+          <span className="font-mono text-xs text-gray-400">PROCESS_FLOW</span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { num: "01", title: "Discovery Call", desc: "We listen. You talk. No pitch decks." },
+            { num: "02", title: "Strategic Audit", desc: "Map the problem before writing code." },
+            { num: "03", title: "Build & Iterate", desc: "Ship fast. Learn faster. Course correct." },
+            { num: "04", title: "Transfer & Own", desc: "Your IP. Your control. Clean handover." }
+          ].map((step) => (
+            <div key={step.num} className="group">
+              <span className="text-orange-600 font-mono text-sm">{step.num}</span>
+              <h4 className="font-bold text-lg mt-2 mb-2 group-hover:translate-x-1 transition-transform">{step.title}</h4>
+              <p className="text-sm text-gray-600">{step.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Contact Form - Brutalist */}
       <div className="bg-white border border-gray-300 p-8 md:p-16" id="contact-form">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -398,15 +426,15 @@ const AboutPage = () => {
             <input type="text" name="_gotcha" className="hidden" />
             <div className="space-y-1">
               <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Name / Company</label>
-              <input type="text" name="name" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
+              <input type="text" name="name" required placeholder="The decision maker." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
             </div>
             <div className="space-y-1">
               <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Direct Contact Email</label>
-              <input type="email" name="email" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
+              <input type="email" name="email" required placeholder="Where we reply." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
             </div>
             <div className="space-y-1">
               <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Tell us more</label>
-              <textarea name="message" rows="3" required className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 outline-none transition-colors font-sans" />
+              <textarea name="message" rows="3" required placeholder="The brief." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
             </div>
             {submitted ? (
               <div className="w-full bg-orange-600 text-white py-4 font-mono text-xs uppercase tracking-widest text-center">
@@ -466,7 +494,7 @@ const App = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden sm:flex items-center gap-6">
           <NavLink label="Home" active={activePage === 'home'} onClick={() => setActivePage('home')} />
           <NavLink label="Showcase" active={activePage === 'showcase'} onClick={() => setActivePage('showcase')} />
           <NavLink label="About" active={activePage === 'about'} onClick={() => setActivePage('about')} />
@@ -480,7 +508,7 @@ const App = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button className="sm:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <div className="space-y-1">
             <span className={`block w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
             <span className={`block w-6 h-0.5 bg-black transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
@@ -491,11 +519,17 @@ const App = () => {
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#EAEAEA] pt-24 px-6 animate-fadeIn md:hidden">
+        <div className="fixed inset-0 z-40 bg-[#EAEAEA] pt-24 px-6 animate-fadeIn sm:hidden">
           <div className="flex flex-col gap-8">
             <button className="text-4xl font-sans font-bold text-left" onClick={() => { setActivePage('home'); setIsMenuOpen(false) }}>HOME</button>
             <button className="text-4xl font-sans font-bold text-left" onClick={() => { setActivePage('showcase'); setIsMenuOpen(false) }}>SHOWCASE</button>
             <button className="text-4xl font-sans font-bold text-left" onClick={() => { setActivePage('about'); setIsMenuOpen(false) }}>ABOUT</button>
+            <button
+              onClick={() => { goToContact(); setIsMenuOpen(false); }}
+              className="text-4xl font-bold tracking-tighter flex items-center gap-3 bg-black text-white px-6 py-4 hover:bg-orange-600 transition-colors w-fit"
+            >
+              ENTER <ForwardEnterIcon className="w-8 h-8" />
+            </button>
           </div>
         </div>
       )}
@@ -507,8 +541,19 @@ const App = () => {
 
       {/* Footer */}
       <footer className="border-t border-gray-300 py-8 bg-[#EAEAEA] px-6 md:px-12">
-        <div className="max-w-screen-xl mx-auto flex justify-center items-center font-mono text-xs text-gray-500">
+        <div className="max-w-screen-xl mx-auto flex justify-between items-center font-mono text-xs text-gray-500">
           <p>© 2025 ENTER KONSULT</p>
+          <a
+            href="https://www.linkedin.com/company/enterkonsult/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-orange-600 transition-colors"
+            aria-label="LinkedIn"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
         </div>
       </footer>
     </div>
