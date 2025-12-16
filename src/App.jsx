@@ -410,7 +410,7 @@ const AboutPage = () => {
       </div>
 
       {/* Contact Form - Brutalist */}
-      <div className="bg-white border border-gray-300 p-8 md:p-16" id="contact-form">
+      <div className="bg-white border border-gray-300 p-8 md:p-16 scroll-mt-20" id="contact-form">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <h3 className="text-4xl font-sans font-bold tracking-tighter mb-6">READY TO ENTER?</h3>
