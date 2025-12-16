@@ -413,8 +413,8 @@ const AboutPage = () => {
       <div className="bg-white border border-gray-300 p-8 md:p-16 scroll-mt-20" id="contact-form">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-4xl font-sans font-bold tracking-tighter mb-6">READY TO ENTER?</h3>
-            <p className="text-gray-600 text-lg mb-8">Tell us about the opportunity you have identified or the problem you're trying to solve.<br /><br />Let's <b>ENTER Konsult.</b> <ForwardEnterIcon className="w-4 h-4 inline-block ml-1" /></p>
+            <h3 className="text-4xl font-sans font-bold tracking-tighter mb-6">STATE YOUR CASE.</h3>
+            <p className="text-gray-600 text-lg mb-8">The problem. The vision. The stakes.<br /><br /><span className="inline-flex items-center gap-2"><span className="w-2 h-2 bg-orange-600 rounded-full animate-pulse" />We're listening.</span></p>
 
             <div className="space-y-4 font-mono text-sm text-gray-500">
               <p>EMAIL: HELLO@ENTERKONSULT.COM</p>
