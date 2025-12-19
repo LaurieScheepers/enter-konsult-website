@@ -242,9 +242,9 @@ const ShowcasePage = ({ goToContact }) => (
             href="https://www.codetonight.co.za"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-xs text-orange-600 italic border-b border-orange-600/40 hover:border-orange-600 pb-0.5 transition-all duration-300 hover:tracking-wider"
+            className="group font-mono text-[10px] tracking-widest uppercase text-orange-600 block border-b border-orange-600/40 hover:border-orange-600 pt-1 pb-0.5 transition-all duration-300 hover:tracking-wider w-fit ml-auto"
           >
-            et alia
+            ET ALIA <ForwardEnterIcon className="w-3 h-3 inline-block ml-1 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>
