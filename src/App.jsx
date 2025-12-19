@@ -419,6 +419,7 @@ const AboutPage = () => {
             <div className="space-y-4 font-mono text-sm text-gray-500">
               <p>EMAIL: HELLO@ENTERKONSULT.COM</p>
               <p>LOC: CAPE TOWN, SOUTH AFRICA</p>
+              <p>RATES: SCOPE-BASED</p>
             </div>
           </div>
 
