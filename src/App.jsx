@@ -323,7 +323,11 @@ const AboutPage = () => {
     e.preventDefault();
     const form = e.target;
     const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-    if (res.ok) { setSubmitted(true); form.reset(); }
+    if (res.ok) {
+      setSubmitted(true);
+      form.reset();
+      setTimeout(() => setSubmitted(false), 4000);
+    }
   };
 
   return (
@@ -438,7 +442,7 @@ const AboutPage = () => {
               <textarea name="message" rows="3" required placeholder="The brief." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
             </div>
             {submitted ? (
-              <div className="w-full bg-orange-600 text-white py-4 font-mono text-xs uppercase tracking-widest text-center">
+              <div className="w-full bg-orange-600 text-white py-5 px-4 font-mono text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-center leading-relaxed">
                 Message Received. We'll be in touch.
               </div>
             ) : (
