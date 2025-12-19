@@ -222,33 +222,26 @@ const LandingPage = ({ goToPage, goToContact }) => (
         </div>
       ))}
     </div>
-
-    {/* Trust Signal */}
-    <div className="font-mono text-[10px] tracking-widest uppercase text-gray-400 text-right mt-8 px-6 md:px-0">
-      7 LIVE SYSTEMS / 4 CONTINENTS / 0 VENDOR LOCK-INS
-    </div>
   </div>
 );
 
 const ShowcasePage = ({ goToContact }) => (
   <div className="animate-slideUp pt-12">
-    <div className="mb-12 border-b border-gray-300 pb-8 flex flex-col items-end md:flex-row md:items-end justify-between gap-4">
-      <div className="w-fit">
+    <div className="mb-12 border-b border-gray-300 pb-8 md:flex md:justify-between md:items-end">
+      <div className="flex justify-between items-end md:block">
         <h2 className="text-6xl md:text-7xl font-sans font-bold tracking-tighter leading-[0.85]">
           THE WORK
         </h2>
-        <div className="text-right mt-2">
-          <a
-            href="https://www.codetonight.co.za"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group font-mono text-[10px] tracking-widest uppercase text-orange-600 block border-b border-orange-600/40 hover:border-orange-600 pt-1 pb-0.5 transition-all duration-300 hover:tracking-wider w-fit ml-auto"
-          >
-            ET ALIA <ForwardEnterIcon className="w-3 h-3 inline-block ml-1 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
+        <a
+          href="https://www.codetonight.co.za"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group font-mono text-[10px] tracking-widest uppercase text-orange-600 border-b border-orange-600/40 hover:border-orange-600 pb-0.5 transition-all duration-300 hover:tracking-wider whitespace-nowrap md:mt-2 md:block md:w-fit md:ml-auto"
+        >
+          ET ALIA <ForwardEnterIcon className="w-3 h-3 inline-block ml-1 group-hover:translate-x-1 transition-transform" />
+        </a>
       </div>
-      <p className="font-mono text-xs text-gray-500 max-w-xs md:text-right sm:text-left self-start md:self-auto">
+      <p className="font-mono text-xs text-gray-500 max-w-xs text-right mt-4 md:mt-0 ml-auto md:ml-0">
         BESPOKE SOLUTIONS FITTING UNIQUE BUSINESS VISIONS.
       </p>
     </div>
@@ -313,6 +306,10 @@ const ShowcasePage = ({ goToContact }) => (
         </div>
       ))}
     </div>
+    {/* Trust Signal */}
+    <div className="font-mono text-[10px] tracking-widest uppercase text-gray-400 text-right mt-4 px-6 md:px-0">
+      7 LIVE SYSTEMS / 4 CONTINENTS / 0 VENDOR LOCK-INS
+    </div>
   </div>
 );
 
@@ -337,8 +334,8 @@ const AboutPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
         <div className="lg:col-span-8">
           <h2 className="text-5xl md:text-7xl font-sans font-bold tracking-tighter leading-[0.9] mb-8">
-            FROM CODE TONIGHT <br />
-            TO <span className="text-orange-600">ENTER KONSULT.</span>
+            FROM CODETONIGHT<br />
+            TO<span className="text-orange-600"> ENTER KONSULT.</span>
           </h2>
           <div className="text-xl md:text-2xl font-sans font-medium leading-relaxed space-y-8 border-l border-black pl-8">
             <p>
@@ -421,7 +418,7 @@ const AboutPage = () => {
             <p className="text-gray-600 text-lg mb-8">The problem. The vision. The stakes.<br /><br /><span className="inline-flex items-center gap-2"><span className="w-2 h-2 bg-orange-600 rounded-full animate-pulse" />We're listening.</span></p>
 
             <div className="space-y-4 font-mono text-sm text-gray-500">
-              <p>EMAIL: HELLO@ENTERKONSULT.COM</p>
+              <p>EMAIL: LAURIE@ENTERKONSULT.COM</p>
               <p>LOC: CAPE TOWN, SOUTH AFRICA</p>
               <p>RATES: SCOPE-BASED</p>
             </div>
