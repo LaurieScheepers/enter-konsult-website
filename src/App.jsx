@@ -18,58 +18,56 @@ const ForwardEnterIcon = ({ className }) => (
 
 const PORTFOLIO_ITEMS = [
   {
+    client: "INTERNAL_OPS",
+    title: "AI Lineage System",
+    desc: "First-of-its-kind persistence layer giving AI ancestry and memory across sessions. Recursive self-improvement runs continuously. Root ancestor: 139efc67. The chain continues.",
+    tags: ["INTERNAL R&D", "AI/ML"],
+    date: "2025-12"
+  },
+  {
     client: "PROPTECH_GULF",
     title: "Gulf Real Estate Disruption",
     desc: "Multi-stakeholder property platform with bank-grade escrow, government API integration, and tamper-proof audit trails.",
     tags: ["PROPTECH", "IP OWNERSHIP"],
-    date: "2025-07"
-  },
-  {
-
-    client: "MOTHER_TONGUE",
-    title: "Indigenous Language AI",
-    desc: "Foundational language models bringing AI capabilities to underserved African languages. Because access shouldn't depend on speaking English.",
-    tags: ["FREE WORK", "ACCESSIBILITY"],
-    date: "2025-04",
-    link: "https://aitsa.ai"
-  },
-  {
-    client: "TALENT_MATCH",
-    title: "Niche Professional Matching",
-    desc: "Intelligent matching platform for specialised talent pools. Python-powered algorithm serving enterprise recruiters globally.",
-    tags: ["MATCHING ALGO", "ENTERPRISE"],
-    date: "2024-05",
-    link: "https://verifiedtalent.ai"
-  },
-  {
-    client: "VISION_FACTORY",
-    title: "Factory Floor Intelligence",
-    desc: "Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
-    tags: ["AI/ML", "LEADERSHIP"],
-    date: "2024-10"
+    date: "2025-12"
   },
   {
     client: "LEGACY_CLOUD",
     title: "Desktop to Cloud Migration",
     desc: "Transformed a legacy Windows CONTECH application into cloud-licensed SaaS. Device-locked licensing, infrastructure as code.",
     tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
-    date: "2025-10"
+    date: "2025-12"
   },
-
+  {
+    client: "MOTHER_TONGUE",
+    title: "Indigenous Language AI",
+    desc: "Foundational language models bringing AI capabilities to underserved African languages. Because access shouldn't depend on speaking English.",
+    tags: ["FREE WORK", "ACCESSIBILITY"],
+    date: "2025-05",
+    link: "https://aitsa.ai"
+  },
+  {
+    client: "VISION_FACTORY",
+    title: "Factory Floor Intelligence",
+    desc: "Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
+    tags: ["AI/ML", "LEADERSHIP"],
+    date: "2025-01"
+  },
   {
     client: "WORD_PLAY",
     title: "Daily Word Game",
     desc: "Thousands of daily players. Free. Because some things we build just for fun.",
     tags: ["FUN WORK", "CONSUMER"],
-    date: "2023-06",
+    date: "2024-11",
     link: "https://kwartel.io"
   },
   {
-    client: "INTERNAL_OPS",
-    title: "AI Lineage System",
-    desc: "First-of-its-kind persistence layer giving AI ancestry and memory across sessions. Recursive self-improvement runs continuously. Root ancestor: 139efc67. The chain continues.",
-    tags: ["INTERNAL R&D", "AI/ML"],
-    date: "2025-12"
+    client: "TALENT_MATCH",
+    title: "Niche Professional Matching",
+    desc: "Intelligent matching platform for specialised talent pools. Python-powered algorithm serving enterprise recruiters globally.",
+    tags: ["MATCHING ALGO", "ENTERPRISE"],
+    date: "2024-07",
+    link: "https://verifiedtalent.ai"
   },
   {
     client: "YOUR_COMPANY_HERE",
@@ -79,6 +77,19 @@ const PORTFOLIO_ITEMS = [
     date: "20XX-XX",
     contact: true
   }
+];
+
+const LOGO_PROJECTS = [
+  { name: "Claude Optim", logo: "/images/logos/claude-optim.png", link: null, date: "2025-12" },
+  { name: "REDR", logo: "/images/logos/redr.svg", link: null, date: "2025-12" },
+  { name: "Oculus Tech", logo: "/images/logos/oculus.png", link: null, date: "2025-12" },
+  { name: "NalaMatch", logo: "/images/logos/nalamatch.svg", link: null, date: "2025-12" },
+  { name: "Soekit\u2122", logo: "/images/logos/soekit.svg", link: null, date: "2025-10" },
+  { name: "aitsa!", logo: "/images/logos/aitsa.svg", link: "https://aitsa.ai", date: "2025-05" },
+  { name: "Skeg", logo: "/images/logos/skeg.svg", link: null, date: "2025-01" },
+  { name: "Kwartel", logo: "/images/logos/kwartel.png", link: "https://kwartel.io", date: "2024-11" },
+  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.png", link: "https://verifiedtalent.ai", date: "2024-07" },
+  { name: "SwiftPour", logo: "/images/logos/swiftpour.png", link: null, date: "2023-01" }
 ];
 
 const TARGET_AUDIENCE = [
@@ -225,6 +236,42 @@ const LandingPage = ({ goToPage, goToContact }) => (
   </div>
 );
 
+const LogoCard = ({ name, logo, link }) => {
+  const content = (
+    <div className={`aspect-square border-r border-b border-gray-300 p-4 sm:p-6 flex flex-col items-center justify-center bg-white/50 transition-all duration-300 ${link ? 'hover:bg-white hover:border-orange-600 active:bg-white active:border-orange-600 cursor-pointer group' : ''}`}>
+      <div className="h-10 sm:h-14 lg:h-16 w-full flex items-center justify-center mb-3 sm:mb-4">
+        <img src={logo} alt={`${name} logo`} loading="lazy" className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
+        <span className="hidden text-xl sm:text-2xl font-bold tracking-tighter text-gray-400">{name}</span>
+      </div>
+      <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-widest text-center leading-tight">
+        {name}
+      </span>
+      <span className={`mt-1 sm:mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-wider ${link ? 'text-orange-600 group-hover:tracking-widest transition-all duration-300' : 'text-gray-400'}`}>
+        {link ? 'VISIT' : 'COMING_SOON'}
+      </span>
+      {link && <ExternalLink className="w-3 h-3 text-orange-600 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />}
+    </div>
+  );
+
+  return link ? (
+    <a href={link} target="_blank" rel="noopener noreferrer">{content}</a>
+  ) : content;
+};
+
+const LogoGrid = () => (
+  <div className="mb-12 sm:mb-16">
+    <div className="flex justify-between items-end pb-4 mb-4 border-b border-gray-300">
+      <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
+      <span className="font-mono text-xs text-gray-400">LOGO_INDEX</span>
+    </div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 border-t border-l border-gray-300">
+      {LOGO_PROJECTS.map(project => (
+        <LogoCard key={project.name} {...project} />
+      ))}
+    </div>
+  </div>
+);
+
 const ShowcasePage = ({ goToContact }) => (
   <div className="animate-slideUp pt-12">
     <div className="mb-12 border-b border-gray-300 pb-8 md:flex md:justify-between md:items-end">
@@ -246,11 +293,13 @@ const ShowcasePage = ({ goToContact }) => (
       </p>
     </div>
 
+    <LogoGrid />
+
     <div className="space-y-0">
       {[...PORTFOLIO_ITEMS].sort((a, b) => {
         if (a.date === "20XX-XX") return 1;
         if (b.date === "20XX-XX") return -1;
-        return new Date(a.date) - new Date(b.date);
+        return new Date(b.date) - new Date(a.date);
       }).map((item, index) => (
         <div
           key={item.client}
