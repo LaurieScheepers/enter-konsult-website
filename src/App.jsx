@@ -524,8 +524,13 @@ const App = () => {
     // Background color set to specific 'Paper Grey' to match screenshot warmth
     <div className="min-h-screen bg-[#EAEAEA] text-black font-sans selection:bg-orange-600 selection:text-white">
 
+      {/* Skip link for keyboard navigation - WCAG AAA */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
       {/* Top Navigation - Sticky & Minimal */}
-      <header className="sticky top-0 z-50 bg-[#EAEAEA]/90 backdrop-blur-sm border-b border-gray-300 h-16 flex items-center justify-between px-6 md:px-12">
+      <header role="banner" className="sticky top-0 z-50 bg-[#EAEAEA]/90 backdrop-blur-sm border-b border-gray-300 h-16 flex items-center justify-between px-6 md:px-12">
 
         {/* LOGO COMPONENT */}
         <div
@@ -586,12 +591,12 @@ const App = () => {
       )}
 
       {/* Main Content Container - Centered with Max Width */}
-      <main className="max-w-screen-xl mx-auto px-6 md:px-12 pb-20">
+      <main id="main-content" role="main" className="max-w-screen-xl mx-auto px-6 md:px-12 pb-20">
         {pages[activePage]}
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-300 py-8 bg-[#EAEAEA] px-6 md:px-12">
+      <footer role="contentinfo" className="border-t border-gray-300 py-8 bg-[#EAEAEA] px-6 md:px-12">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center font-mono text-xs text-gray-500">
           <p>© 2025 ENTER KONSULT</p>
           <a
