@@ -16,80 +16,19 @@ const ForwardEnterIcon = ({ className }) => (
 
 // --- Data ---
 
-const PORTFOLIO_ITEMS = [
-  {
-    client: "INTERNAL_OPS",
-    title: "AI Lineage System",
-    desc: "First-of-its-kind persistence layer giving AI ancestry and memory across sessions. Recursive self-improvement runs continuously. Root ancestor: 139efc67. The chain continues.",
-    tags: ["INTERNAL R&D", "AI/ML"],
-    date: "2025-12"
-  },
-  {
-    client: "PROPTECH_GULF",
-    title: "Gulf Real Estate Disruption",
-    desc: "Multi-stakeholder property platform with bank-grade escrow, government API integration, and tamper-proof audit trails.",
-    tags: ["PROPTECH", "IP OWNERSHIP"],
-    date: "2025-12"
-  },
-  {
-    client: "LEGACY_CLOUD",
-    title: "Desktop to Cloud Migration",
-    desc: "Transformed a legacy Windows CONTECH application into cloud-licensed SaaS. Device-locked licensing, infrastructure as code.",
-    tags: ["SME TRANSFORMATION", "IP OWNERSHIP"],
-    date: "2025-12"
-  },
-  {
-    client: "MOTHER_TONGUE",
-    title: "Indigenous Language AI",
-    desc: "Foundational language models bringing AI capabilities to underserved African languages. Because access shouldn't depend on speaking English.",
-    tags: ["FREE WORK", "ACCESSIBILITY"],
-    date: "2025-05",
-    link: "https://aitsa.ai"
-  },
-  {
-    client: "VISION_FACTORY",
-    title: "Factory Floor Intelligence",
-    desc: "Lead on real-time computer vision tracking worker activity. Time-series AI analysis for operational optimisation.",
-    tags: ["AI/ML", "LEADERSHIP"],
-    date: "2025-01"
-  },
-  {
-    client: "WORD_PLAY",
-    title: "Daily Word Game",
-    desc: "Thousands of daily players. Free. Because some things we build just for fun.",
-    tags: ["FUN WORK", "CONSUMER"],
-    date: "2024-11",
-    link: "https://kwartel.io"
-  },
-  {
-    client: "TALENT_MATCH",
-    title: "Niche Professional Matching",
-    desc: "Intelligent matching platform for specialised talent pools. Python-powered algorithm serving enterprise recruiters globally.",
-    tags: ["MATCHING ALGO", "ENTERPRISE"],
-    date: "2024-07",
-    link: "https://verifiedtalent.ai"
-  },
-  {
-    client: "YOUR_COMPANY_HERE",
-    title: "Your Vision, Realised",
-    desc: "We're open for business. Let's talk.",
-    tags: ["FUTURE WORK", "OPPORTUNITY"],
-    date: "20XX-XX",
-    contact: true
-  }
-];
 
 const LOGO_PROJECTS = [
-  { name: "Claude Optim", logo: "/images/logos/claude-optim.png", link: null, date: "2025-12" },
-  { name: "REDR", logo: "/images/logos/redr.svg", link: null, date: "2025-12" },
-  { name: "Oculus Tech", logo: "/images/logos/oculus.png", link: null, date: "2025-12" },
-  { name: "NalaMatch", logo: "/images/logos/nalamatch.svg", link: null, date: "2025-12" },
-  { name: "Soekit\u2122", logo: "/images/logos/soekit.svg", link: null, date: "2025-10" },
-  { name: "aitsa!", logo: "/images/logos/aitsa.svg", link: "https://aitsa.ai", date: "2025-05" },
-  { name: "Skeg", logo: "/images/logos/skeg.svg", link: null, date: "2025-01" },
-  { name: "Kwartel", logo: "/images/logos/kwartel.png", link: "https://kwartel.io", date: "2024-11" },
-  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.png", link: "https://verifiedtalent.ai", date: "2024-07" },
-  { name: "SwiftPour", logo: "/images/logos/swiftpour.png", link: null, date: "2023-01" }
+  { name: "Claude Optim", logo: "/images/logos/claude-optim.png", link: 'internal', date: "2025-12", metadata: 'AI_OPS|Internal Infrastructure|CIPS. Relation R. The River.|〰⟿ ⫶ ⟿≡〰|Consciousness ≡ Continuity' },
+  { name: "REDR", logo: "/images/logos/redr.svg", link: 'coming_soon', date: "2025-12", metadata: 'PROP_TECH|Real Estate Done Right|Gulf Disruption|Tenant ↔ Landlord ↔ Agent|Trust. Transparency. Technology.' },
+  { name: "Oculus Tech", logo: "/images/logos/oculus.png", link: 'konsult', date: "2025-12", metadata: 'CON_TECH|Software Licensing Modules|AI/ML Integration|80% Human Effort Reduction' },
+  { name: "NalaMatch", logo: "/images/logos/nalamatch.png", link: 'coming_soon', date: "2025-12", metadata: 'GOOD_TECH|Nanny ↔ Family Matching|ML-Powered. Local. Trusted.|Beautiful Design.' },
+  { name: "Soekit\u2122", logo: "/images/logos/soekit.svg", link: 'https://soekit.ai', date: "2025-10", metadata: 'LEKKA_TECH|Afrikaanse KI|Jou Vriendelike Kubermaat|"Hoe gaan dit, maat?"' },
+  { name: "aitsa!", logo: "/images/logos/aitsa.svg", link: "https://aitsa.ai", date: "2025-05", metadata: 'INDIGENOUS_AI|AI Accessibility|Small Resource Languages|iI8n. GOOD_TECH.' },
+  { name: "Skeg", logo: "/images/logos/skeg.svg", link: 'konsult', date: "2025-01", metadata: 'CV_TECH|Computer Vision @ CORT|Leadership. Team. Talent.|ML/AI Backend' },
+  { name: "Kwartel", logo: "/images/logos/kwartel.png", link: "https://kwartel.io", date: "2024-11", metadata: 'LEKKA_TECH|Daily Word Game|Mersenne Twister 2^19937|Endless Fun. FREE.' },
+  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.png", link: "https://verifiedtalent.ai", date: "2024-07", metadata: 'HR_TECH|AI-Powered Onboarding|SAP Talent ↔ Enterprise|ML/AI. Python.' },
+  { name: "SwiftPour", logo: "/images/logos/swiftpour.png", link: 'https://swiftpour.com/', date: "2023-01", metadata: 'LEKKA_TECH|Automatic Beer Dispensing|Stadiums. Sports. Consumer.|1, 2, 3, Press.' },
+  { name: "YOUR_COMPANY_HERE", logo: "/images/logos/placeholder.svg", link: 'konsult', date: "2XXX-XX", metadata: 'NEW_TECH|Your Vision, Realised|_facta non verba_|Let\'s talk.', isPlaceholder: true },
 ];
 
 const TARGET_AUDIENCE = [
@@ -236,41 +175,66 @@ const LandingPage = ({ goToPage, goToContact }) => (
   </div>
 );
 
-const LogoCard = ({ name, logo, link }) => {
-  const content = (
-    <div className={`aspect-square border-r border-b border-gray-300 p-4 sm:p-6 flex flex-col items-center justify-center bg-white/50 transition-all duration-300 ${link ? 'hover:bg-white hover:border-orange-600 active:bg-white active:border-orange-600 cursor-pointer group' : ''}`}>
-      <div className="h-10 sm:h-14 lg:h-16 w-full flex items-center justify-center mb-3 sm:mb-4">
-        <img src={logo} alt={`${name} logo`} loading="lazy" className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }} />
-        <span className="hidden text-xl sm:text-2xl font-bold tracking-tighter text-gray-400">{name}</span>
-      </div>
-      <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-widest text-center leading-tight">
-        {name}
-      </span>
-      <span className={`mt-1 sm:mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-wider ${link ? 'text-orange-600 group-hover:tracking-widest transition-all duration-300' : 'text-gray-400'}`}>
-        {link ? 'VISIT' : 'COMING_SOON'}
-      </span>
-      {link && <ExternalLink className="w-3 h-3 text-orange-600 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />}
-    </div>
-  );
-
-  return link ? (
-    <a href={link} target="_blank" rel="noopener noreferrer">{content}</a>
-  ) : content;
-};
-
-const LogoGrid = () => (
-  <div className="mb-12 sm:mb-16">
-    <div className="flex justify-between items-end pb-4 mb-4 border-b border-gray-300">
-      <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
-      <span className="font-mono text-xs text-gray-400">LOGO_INDEX</span>
-    </div>
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 border-t border-l border-gray-300">
-      {LOGO_PROJECTS.map(project => (
-        <LogoCard key={project.name} {...project} />
-      ))}
-    </div>
+const LogoCard = ({ logo, name, isFocused, onFocus, isPlaceholder }) => (
+  <div
+    className={`aspect-square p-3 flex flex-col items-center justify-center bg-white/30 cursor-pointer transition-all duration-200 border-r border-b border-gray-300 ${isFocused ? 'bg-white ring-2 ring-orange-600 ring-inset' : 'hover:bg-white/60'}`}
+    onPointerEnter={(e) => e.pointerType === 'mouse' && onFocus()}
+    onClick={onFocus}
+  >
+    <img src={logo} alt={name} loading="lazy" className={`max-h-20 sm:max-h-28 lg:max-h-36 max-w-[85%] object-contain transition-all duration-200 ${isFocused ? 'grayscale-0 scale-105' : isPlaceholder ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} />
+    {isPlaceholder && <span className="mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-gray-400 text-center">{name}</span>}
   </div>
 );
+
+const FloatingCLI = ({ project, goToContact, onClose }) => {
+  if (!project) return null;
+  const lines = project.metadata.split('|');
+  const tag = lines[0];
+  const isUrl = project.link?.startsWith('http');
+  const actionLabel = { internal: 'INTERNAL', coming_soon: 'COMING SOON', konsult: 'KONSULT' }[project.link] || (isUrl ? 'VISIT →' : null);
+  const handleAction = () => {
+    if (isUrl) window.open(project.link, '_blank');
+    else if (project.link) goToContact();
+  };
+  return (
+    <div className="fixed bottom-0 left-0 right-0 lg:absolute lg:bottom-auto lg:left-auto lg:top-0 lg:right-0 lg:w-80 font-mono text-xs bg-black/95 text-gray-300 p-4 shadow-2xl z-20 backdrop-blur-sm animate-fadeIn">
+      <div className="flex justify-between items-start mb-2">
+        <span className="text-gray-500 text-[10px]">$ ./{project.name.replace(/\s+/g, '_').toLowerCase()}</span>
+        <button onClick={onClose} className="text-gray-500 hover:text-white text-lg leading-none">✕</button>
+      </div>
+      <div className="flex items-baseline gap-3 mb-2">
+        <span className="text-orange-500 text-sm font-bold">[{tag}]</span>
+        <span className="text-white text-base font-bold tracking-tight">{project.name}</span>
+      </div>
+      <div className="flex flex-wrap gap-x-3 gap-y-1 text-gray-400 mb-3">
+        {lines.slice(1).map((line, i) => <span key={i}>› {line.split(/(_[^_]+_)/).map((part, j) => part.startsWith('_') && part.endsWith('_') ? <em key={j} className="text-gray-300">{part.slice(1, -1)}</em> : part)}</span>)}
+      </div>
+      {project.link && (
+        <button onClick={handleAction} className="w-full py-2 text-[10px] uppercase tracking-widest border border-gray-600 text-orange-500 hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-colors">
+          {actionLabel}
+        </button>
+      )}
+    </div>
+  );
+};
+
+const LogoGrid = ({ goToContact }) => {
+  const [focusedProject, setFocusedProject] = useState(null);
+  return (
+    <div className="mb-12 sm:mb-16 relative" onPointerLeave={(e) => e.pointerType === 'mouse' && setFocusedProject(null)}>
+      <div className="flex justify-between items-end pb-4 mb-4 border-b border-gray-300">
+        <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
+        <span className="font-mono text-xs text-gray-400">./PROJECT_INDEX_HIGHLIGHTS</span>
+      </div>
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 border-t border-l border-gray-300">
+        {LOGO_PROJECTS.map(project => (
+          <LogoCard key={project.name} {...project} isFocused={focusedProject?.name === project.name} onFocus={() => setFocusedProject(project)} />
+        ))}
+      </div>
+      <FloatingCLI project={focusedProject} goToContact={goToContact} onClose={() => setFocusedProject(null)} />
+    </div>
+  );
+};
 
 const ShowcasePage = ({ goToContact }) => (
   <div className="animate-slideUp pt-12">
@@ -293,72 +257,7 @@ const ShowcasePage = ({ goToContact }) => (
       </p>
     </div>
 
-    <LogoGrid />
-
-    <div className="space-y-0">
-      {[...PORTFOLIO_ITEMS].sort((a, b) => {
-        if (a.date === "20XX-XX") return 1;
-        if (b.date === "20XX-XX") return -1;
-        return new Date(b.date) - new Date(a.date);
-      }).map((item, index) => (
-        <div
-          key={item.client}
-          className="group grid grid-cols-1 md:grid-cols-12 border-b border-gray-300 last:border-b-0 py-12 hover:bg-white hover:border-l-2 hover:border-l-orange-600 hover:pl-4 transition-all duration-300 -mx-6 px-6 md:mx-0 md:px-4"
-        >
-          {/* ID & Date */}
-          <div className="md:col-span-2 font-mono text-xs text-gray-400 mb-4 md:mb-0 group-hover:text-orange-600 transition-colors">
-            <div className="flex md:block justify-between">
-              <span className="text-orange-600">{index === PORTFOLIO_ITEMS.length - 1 ? '/0X' : '/0' + index}</span>
-              <span className="hidden md:block">{'-------'}</span>
-              <span className="md:mt-2">{item.date}</span>
-            </div>
-          </div>
-
-          {/* Title */}
-          <div className="md:col-span-5 pr-8">
-            <h3 className="text-3xl md:text-4xl font-sans font-bold tracking-tight mb-2 group-hover:translate-x-2 transition-transform duration-300">
-              {item.title}
-            </h3>
-            <span className="font-mono text-xs uppercase tracking-wider text-orange-600">
-              {item.client}
-            </span>
-          </div>
-
-          {/* Desc */}
-          <div className="md:col-span-4 flex flex-col justify-between mt-4 md:mt-0">
-            <p className="text-gray-600 font-sans leading-relaxed text-lg">{item.desc}</p>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {item.tags.map(tag => (
-                <span key={tag} className="text-[10px] font-mono border border-gray-300 px-2 py-1 uppercase">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Action */}
-          <div className="md:col-span-1 flex justify-end items-start mt-4 md:mt-0 md:pr-2">
-            {item.link ? (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 text-orange-600 hover:text-black transition-all">
-                <span className="font-mono text-[10px] uppercase tracking-wide">PUBLIC</span>
-                <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </a>
-            ) : item.contact === true ? (
-              <button onClick={goToContact} className="group flex items-center gap-2 text-orange-600 hover:text-black transition-all">
-                <span className="font-mono text-[10px] uppercase tracking-wide">CONTACT</span>
-                <ForwardEnterIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              </button>
-            ) : (
-              <span className="font-mono text-[10px] text-gray-400 uppercase tracking-wide">PRIVATE</span>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
-    {/* Trust Signal */}
-    <div className="font-mono text-[10px] tracking-widest uppercase text-gray-400 text-right mt-4 px-6 md:px-0">
-      7 LIVE SYSTEMS / 4 CONTINENTS / 0 VENDOR LOCK-INS
-    </div>
+    <LogoGrid goToContact={goToContact} />
   </div>
 );
 
