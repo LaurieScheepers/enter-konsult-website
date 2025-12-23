@@ -175,14 +175,16 @@ const LandingPage = ({ goToPage, goToContact }) => (
   </div>
 );
 
-const LogoCard = ({ logo, name, isFocused, onFocus, isPlaceholder }) => (
+const LogoCard = ({ logo, name, isSelected, isHovered, onHover, onSelect, isPlaceholder, hasSelection }) => (
   <div
-    className={`aspect-square p-3 flex flex-col items-center justify-center bg-white/30 cursor-pointer transition-all duration-200 border-r border-b border-gray-300 ${isFocused ? 'bg-white ring-2 ring-orange-600 ring-inset' : 'hover:bg-white/60'}`}
-    onPointerEnter={(e) => e.pointerType === 'mouse' && onFocus()}
-    onClick={onFocus}
+    className={`aspect-square p-3 flex flex-col items-center justify-center bg-white/30 cursor-pointer transition-all duration-200 border-r border-b border-gray-300 group relative ${isSelected ? 'bg-white ring-2 ring-orange-600 ring-inset' : 'hover:bg-white/60'}`}
+    onPointerEnter={(e) => e.pointerType === 'mouse' && onHover(true)}
+    onPointerLeave={(e) => e.pointerType === 'mouse' && onHover(null)}
+    onClick={onSelect}
   >
-    <img src={logo} alt={name} loading="lazy" className={`max-h-20 sm:max-h-28 lg:max-h-36 max-w-[85%] object-contain transition-all duration-200 ${isFocused ? 'grayscale-0 scale-105' : isPlaceholder ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} />
+    <img src={logo} alt={name} loading="lazy" className={`max-h-20 sm:max-h-28 lg:max-h-36 max-w-[85%] object-contain transition-all duration-200 ${isSelected || isHovered ? 'grayscale-0 scale-105' : isPlaceholder ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} />
     {isPlaceholder && <span className="mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-gray-400 text-center">{name}</span>}
+    {hasSelection && !isSelected && !isPlaceholder && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 font-mono text-[8px] uppercase tracking-wider text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">click to view</span>}
   </div>
 );
 
@@ -219,19 +221,25 @@ const FloatingCLI = ({ project, goToContact, onClose }) => {
 };
 
 const LogoGrid = ({ goToContact }) => {
-  const [focusedProject, setFocusedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState(null);
+  const handleHover = (project) => {
+    setHoveredProject(project);
+    if (!selectedProject && project) setSelectedProject(project);
+  };
+  const handleClose = () => setSelectedProject(hoveredProject);
   return (
-    <div className="mb-12 sm:mb-16 relative" onPointerLeave={(e) => e.pointerType === 'mouse' && setFocusedProject(null)}>
+    <div className="mb-12 sm:mb-16 relative">
       <div className="flex justify-between items-end pb-4 mb-4 border-b border-gray-300">
         <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
         <span className="font-mono text-xs text-gray-400">./PROJECT_INDEX_HIGHLIGHTS</span>
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 border-t border-l border-gray-300">
         {LOGO_PROJECTS.map(project => (
-          <LogoCard key={project.name} {...project} isFocused={focusedProject?.name === project.name} onFocus={() => setFocusedProject(project)} />
+          <LogoCard key={project.name} {...project} isSelected={selectedProject?.name === project.name} isHovered={hoveredProject?.name === project.name} onHover={(isEnter) => handleHover(isEnter ? project : null)} onSelect={() => setSelectedProject(project)} hasSelection={!!selectedProject} />
         ))}
       </div>
-      <FloatingCLI project={focusedProject} goToContact={goToContact} onClose={() => setFocusedProject(null)} />
+      <FloatingCLI project={selectedProject} goToContact={goToContact} onClose={handleClose} />
     </div>
   );
 };
