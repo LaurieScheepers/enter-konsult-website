@@ -189,34 +189,63 @@ const LogoCard = ({ logo, name, isSelected, isHovered, onHover, onSelect, isPlac
 );
 
 const FloatingCLI = ({ project, goToContact, onClose }) => {
+  const [isMaximized, setIsMaximized] = useState(false);
   if (!project) return null;
   const lines = project.metadata.split('|');
   const tag = lines[0];
+  const slug = project.name.replace(/\s+/g, '_').toLowerCase();
   const isUrl = project.link?.startsWith('http');
   const actionLabel = { internal: 'INTERNAL', coming_soon: 'COMING SOON', konsult: 'KONSULT' }[project.link] || (isUrl ? 'VISIT →' : null);
   const handleAction = () => {
     if (isUrl) window.open(project.link, '_blank');
     else if (project.link) goToContact();
   };
+  const baseClasses = "font-mono text-xs bg-[#1a1a1a] text-gray-300 shadow-2xl animate-fadeIn border border-gray-700 overflow-hidden transition-all duration-300";
+  const positionClasses = isMaximized
+    ? "fixed inset-4 sm:inset-8 lg:inset-16 rounded-lg z-[60]"
+    : "fixed bottom-0 left-0 right-0 lg:absolute lg:bottom-auto lg:left-auto lg:top-0 lg:right-0 lg:w-96 rounded-t-lg lg:rounded-lg z-20";
   return (
-    <div className="fixed bottom-0 left-0 right-0 lg:absolute lg:bottom-auto lg:left-auto lg:top-0 lg:right-0 lg:w-80 font-mono text-xs bg-black/95 text-gray-300 p-4 shadow-2xl z-20 backdrop-blur-sm animate-fadeIn">
-      <div className="flex justify-between items-start mb-2">
-        <span className="text-gray-500 text-[10px]">$ ./{project.name.replace(/\s+/g, '_').toLowerCase()}</span>
-        <button onClick={onClose} className="text-gray-500 hover:text-white text-lg leading-none">✕</button>
+    <>
+      {isMaximized && <div className="fixed inset-0 bg-black/60 z-[55]" onClick={onClose} />}
+      <div className={`${baseClasses} ${positionClasses}`}>
+      <div className="flex items-center justify-between px-3 py-2 bg-[#2d2d2d] border-b border-gray-700">
+        <div className="flex items-center gap-1.5">
+          <button onClick={onClose} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors" aria-label="Close" />
+          <button onClick={onClose} className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors" aria-label="Minimize" />
+          <button onClick={() => setIsMaximized(!isMaximized)} className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 transition-colors" aria-label={isMaximized ? "Restore" : "Maximize"} />
+        </div>
+        <span className="text-gray-500 text-[10px]">~/{slug}</span>
+        <span className="w-[52px]" />
       </div>
-      <div className="flex items-baseline gap-3 mb-2">
-        <span className="text-orange-500 text-sm font-bold">[{tag}]</span>
-        <span className="text-white text-base font-bold tracking-tight">{project.name}</span>
+      <div className={`p-4 ${isMaximized ? 'p-6 sm:p-8 lg:p-12' : ''} space-y-3 ${isMaximized ? 'space-y-6 h-full overflow-y-auto' : ''}`}>
+        <div className={`text-gray-500 ${isMaximized ? 'text-sm' : 'text-[11px]'}`}>
+          <span className="text-green-400">$</span> cd {slug} && cat description.txt
+        </div>
+        <div className={`flex items-baseline gap-3 ${isMaximized ? 'gap-4' : ''}`}>
+          <span className={`text-orange-500 font-bold ${isMaximized ? 'text-lg' : ''}`}>[{tag}]</span>
+          <span className={`text-white font-bold tracking-tight ${isMaximized ? 'text-3xl sm:text-4xl' : 'text-base'}`}>{project.name}</span>
+        </div>
+        {isMaximized && (
+          <div className="text-gray-500 text-sm border-l-2 border-gray-700 pl-4">
+            <span className="text-gray-400">Launched:</span> {project.date}
+          </div>
+        )}
+        <div className={`flex flex-col gap-1 text-gray-400 ${isMaximized ? 'gap-3 text-base sm:text-lg' : 'text-[13px]'}`}>
+          {lines.slice(1).map((line, i) => (
+            <span key={i} className="flex gap-2">
+              <span className="text-gray-600">›</span>
+              <span>{line.split(/(_[^_]+_)/).map((part, j) => part.startsWith('_') && part.endsWith('_') ? <em key={j} className="text-gray-300">{part.slice(1, -1)}</em> : part)}</span>
+            </span>
+          ))}
+        </div>
+        {project.link && (
+          <button onClick={handleAction} className={`w-full ${isMaximized ? 'max-w-md py-4 text-sm' : 'py-2.5 text-[10px]'} mt-2 uppercase tracking-widest border border-gray-600 text-orange-500 hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-colors`}>
+            {actionLabel}
+          </button>
+        )}
       </div>
-      <div className="flex flex-wrap gap-x-3 gap-y-1 text-gray-400 mb-3">
-        {lines.slice(1).map((line, i) => <span key={i}>› {line.split(/(_[^_]+_)/).map((part, j) => part.startsWith('_') && part.endsWith('_') ? <em key={j} className="text-gray-300">{part.slice(1, -1)}</em> : part)}</span>)}
-      </div>
-      {project.link && (
-        <button onClick={handleAction} className="w-full py-2 text-[10px] uppercase tracking-widest border border-gray-600 text-orange-500 hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-colors">
-          {actionLabel}
-        </button>
-      )}
     </div>
+    </>
   );
 };
 
@@ -239,7 +268,7 @@ const LogoGrid = ({ goToContact }) => {
           <LogoCard key={project.name} {...project} isSelected={selectedProject?.name === project.name} isHovered={hoveredProject?.name === project.name} onHover={(isEnter) => handleHover(isEnter ? project : null)} onSelect={() => setSelectedProject(project)} hasSelection={!!selectedProject} />
         ))}
       </div>
-      <FloatingCLI project={selectedProject} goToContact={goToContact} onClose={handleClose} />
+      <FloatingCLI key={selectedProject?.name} project={selectedProject} goToContact={goToContact} onClose={handleClose} />
     </div>
   );
 };
