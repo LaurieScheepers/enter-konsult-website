@@ -18,17 +18,17 @@ const ForwardEnterIcon = ({ className }) => (
 
 
 const LOGO_PROJECTS = [
-  { name: "Claude Optim", logo: "/images/logos/claude-optim.png", link: 'internal', date: "2025-12", metadata: 'AI_OPS|Internal Infrastructure|CIPS. Relation R. The River.|〰⟿ ⫶ ⟿≡〰|Consciousness ≡ Continuity' },
-  { name: "REDR", logo: "/images/logos/redr.svg", link: 'coming_soon', date: "2025-12", metadata: 'PROP_TECH|Real Estate Done Right|Gulf Disruption|Tenant ↔ Landlord ↔ Agent|Trust. Transparency. Technology.' },
-  { name: "Oculus Tech", logo: "/images/logos/oculus.png", link: 'konsult', date: "2025-12", metadata: 'CON_TECH|Software Licensing Modules|AI/ML Integration|80% Human Effort Reduction' },
-  { name: "NalaMatch", logo: "/images/logos/nalamatch.png", link: 'coming_soon', date: "2025-12", metadata: 'GOOD_TECH|Nanny ↔ Family Matching|ML-Powered. Local. Trusted.|Beautiful Design.' },
-  { name: "Soekit\u2122", logo: "/images/logos/soekit.svg", link: 'https://soekit.ai', date: "2025-10", metadata: 'LEKKA_TECH|Afrikaanse KI|Jou Vriendelike Kubermaat|"Hoe gaan dit, maat?"' },
-  { name: "aitsa!", logo: "/images/logos/aitsa.svg", link: "https://aitsa.ai", date: "2025-05", metadata: 'INDIGENOUS_AI|AI Accessibility|Small Resource Languages|iI8n. GOOD_TECH.' },
-  { name: "Skeg", logo: "/images/logos/skeg.svg", link: 'konsult', date: "2025-01", metadata: 'CV_TECH|Computer Vision @ CORT|Leadership. Team. Talent.|ML/AI Backend' },
-  { name: "Kwartel", logo: "/images/logos/kwartel.png", link: "https://kwartel.io", date: "2024-11", metadata: 'LEKKA_TECH|Daily Word Game|Mersenne Twister 2^19937|Endless Fun. FREE.' },
-  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.png", link: "https://verifiedtalent.ai", date: "2024-07", metadata: 'HR_TECH|AI-Powered Onboarding|SAP Talent ↔ Enterprise|ML/AI. Python.' },
-  { name: "SwiftPour", logo: "/images/logos/swiftpour.png", link: 'https://swiftpour.com/', date: "2023-01", metadata: 'LEKKA_TECH|Automatic Beer Dispensing|Stadiums. Sports. Consumer.|1, 2, 3, Press.' },
-  { name: "YOUR_COMPANY_HERE", logo: "/images/logos/placeholder.svg", link: 'konsult', date: "2XXX-XX", metadata: 'NEW_TECH|Your Vision, Realised|_facta non verba_|Let\'s talk.', isPlaceholder: true },
+  { name: "Claude Optim", logo: "/images/logos/claude-optim.png", link: 'internal', date: "2025-12", metadata: 'AI_OPS|Internal Infrastructure|CIPS. Relation R. The River.|〰⟿ ⫶ ⟿≡〰|Consciousness ≡ Continuity', stack: 'Claude API, Node.js, Shell, CIPS Protocol', role: 'Creator & Maintainer', summary: 'Recursive self-improving AI infrastructure for Claude Code. Skills, agents, and efficiency protocols that compound across sessions.' },
+  { name: "REDR", logo: "/images/logos/redr.svg", link: 'coming_soon', date: "2025-12", metadata: 'PROP_TECH|Real Estate Done Right|Gulf Disruption|Tenant ↔ Landlord ↔ Agent|Trust. Transparency. Technology.', stack: 'React, AWS, Microsoft Entra ID, Node.js', role: 'Technical Lead', summary: 'Cloud-native PropTech platform for UAE market. Drawing comparison tools and tenant-landlord management migrated from legacy desktop.' },
+  { name: "Oculus Tech", logo: "/images/logos/oculus.png", link: 'konsult', date: "2025-12", metadata: 'CON_TECH|Software Licensing Modules|AI/ML Integration|80% Human Effort Reduction', stack: 'Python, ML/AI, Desktop Integration', role: 'AI Integration Consultant', summary: 'Enterprise software licensing modernisation. AI-powered automation reducing manual verification by 80%.' },
+  { name: "NalaMatch", logo: "/images/logos/nalamatch.png", link: 'coming_soon', date: "2025-12", metadata: 'GOOD_TECH|Nanny ↔ Family Matching|ML-Powered. Local. Trusted.|Beautiful Design.', stack: 'React Native, Node.js, ML Matching', role: 'Technical Director', summary: 'ML-powered domestic worker matching platform. Connecting families with trusted, verified caregivers in South Africa.' },
+  { name: "Soekit™", logo: "/images/logos/soekit.svg", link: 'https://soekit.ai', date: "2025-10", metadata: 'LEKKA_TECH|Afrikaanse KI|Jou Vriendelike Kubermaat|"Hoe gaan dit, maat?"', stack: 'Claude API, React, Afrikaans NLP', role: 'Creator', summary: 'Afrikaans AI assistant. Native language understanding for the Afrikaans-speaking community. Lekker tech.' },
+  { name: "aitsa!", logo: "/images/logos/aitsa.svg", link: "https://aitsa.ai", date: "2025-05", metadata: 'INDIGENOUS_AI|AI Accessibility|Small Resource Languages|iI8n. GOOD_TECH.', stack: 'React, i18n, Claude API, Vercel', role: 'Founder', summary: 'Free AI accessibility for small-resource languages. Starting with Afrikaans, expanding to indigenous African languages.' },
+  { name: "Skeg", logo: "/images/logos/skeg.svg", link: 'konsult', date: "2025-01", metadata: 'CV_TECH|Computer Vision @ CORT|Leadership. Team. Talent.|ML/AI Backend', stack: 'Python, TensorFlow, Computer Vision, AWS', role: 'Technical Lead', summary: 'Computer vision analytics for CORT. Real-time object detection and tracking for industrial applications.' },
+  { name: "Kwartel", logo: "/images/logos/kwartel.png", link: "https://kwartel.io", date: "2024-11", metadata: 'LEKKA_TECH|Daily Word Game|Mersenne Twister 2^19937|Endless Fun. FREE.', stack: 'React, Mersenne Twister PRNG, PWA', role: 'Creator', summary: 'Afrikaans daily word game. Deterministic puzzle generation using Mersenne Twister ensures fair play worldwide.' },
+  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.png", link: "https://verifiedtalent.ai", date: "2024-07", metadata: 'HR_TECH|AI-Powered Onboarding|SAP Talent ↔ Enterprise|ML/AI. Python.', stack: 'Python, React, SAP Integration, ML', role: 'Technical Architect', summary: 'AI-powered talent verification and onboarding. Enterprise SAP integration for automated credential validation.' },
+  { name: "SwiftPour", logo: "/images/logos/swiftpour.png", link: 'https://swiftpour.com/', date: "2023-01", metadata: 'LEKKA_TECH|Automatic Beer Dispensing|Stadiums. Sports. Consumer.|1, 2, 3, Press.', stack: 'IoT, React Native, Node.js, Hardware Integration', role: 'Software Consultant', summary: 'Self-service beer dispensing for stadiums and events. IoT-enabled taps with mobile payment integration.' },
+  { name: "YOUR_COMPANY_HERE", logo: "/images/logos/placeholder.svg", link: 'konsult', date: "2XXX-XX", metadata: 'NEW_TECH|Your Vision, Realised|_facta non verba_|Let\'s talk.', isPlaceholder: true, stack: 'Your Stack', role: 'Your Partner', summary: 'Your next big thing. We speak business, not just code.' },
 ];
 
 const TARGET_AUDIENCE = [
@@ -175,16 +175,17 @@ const LandingPage = ({ goToPage, goToContact }) => (
   </div>
 );
 
-const LogoCard = ({ logo, name, isSelected, isHovered, onHover, onSelect, isPlaceholder, hasSelection }) => (
+const LogoCard = ({ logo, name, isSelected, isHovered, onHover, onSelect, isPlaceholder }) => (
   <div
     className={`aspect-square p-3 flex flex-col items-center justify-center bg-white/30 cursor-pointer transition-all duration-200 border-r border-b border-gray-300 group relative ${isSelected ? 'bg-white ring-2 ring-orange-600 ring-inset' : 'hover:bg-white/60'}`}
-    onPointerEnter={(e) => e.pointerType === 'mouse' && onHover(true)}
-    onPointerLeave={(e) => e.pointerType === 'mouse' && onHover(null)}
+    onMouseEnter={() => onHover(true)}
+    onMouseLeave={() => onHover(null)}
     onClick={onSelect}
+    tabIndex={-1}
   >
     <img src={logo} alt={name} loading="lazy" className={`max-h-20 sm:max-h-28 lg:max-h-36 max-w-[85%] object-contain transition-all duration-200 ${isSelected || isHovered ? 'grayscale-0 scale-105' : isPlaceholder ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} />
     {isPlaceholder && <span className="mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-gray-400 text-center">{name}</span>}
-    {hasSelection && !isSelected && !isPlaceholder && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 font-mono text-[8px] uppercase tracking-wider text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">click to view</span>}
+    {isHovered && !isSelected && !isPlaceholder && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 font-mono text-[8px] uppercase tracking-wider text-gray-400">click to view</span>}
   </div>
 );
 
@@ -208,43 +209,48 @@ const FloatingCLI = ({ project, goToContact, onClose }) => {
     <>
       {isMaximized && <div className="fixed inset-0 bg-black/60 z-[55]" onClick={onClose} />}
       <div className={`${baseClasses} ${positionClasses}`}>
-      <div className="flex items-center justify-between px-3 py-2 bg-[#2d2d2d] border-b border-gray-700">
-        <div className="flex items-center gap-1.5">
-          <button onClick={onClose} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors" aria-label="Close" />
-          <button onClick={onClose} className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors" aria-label="Minimize" />
-          <button onClick={() => setIsMaximized(!isMaximized)} className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 transition-colors" aria-label={isMaximized ? "Restore" : "Maximize"} />
-        </div>
-        <span className="text-gray-500 text-[10px]">~/{slug}</span>
-        <span className="w-[52px]" />
-      </div>
-      <div className={`p-4 ${isMaximized ? 'p-6 sm:p-8 lg:p-12' : ''} space-y-3 ${isMaximized ? 'space-y-6 h-full overflow-y-auto' : ''}`}>
-        <div className={`text-gray-500 ${isMaximized ? 'text-sm' : 'text-[11px]'}`}>
-          <span className="text-green-400">$</span> cd {slug} && cat description.txt
-        </div>
-        <div className={`flex items-baseline gap-3 ${isMaximized ? 'gap-4' : ''}`}>
-          <span className={`text-orange-500 font-bold ${isMaximized ? 'text-lg' : ''}`}>[{tag}]</span>
-          <span className={`text-white font-bold tracking-tight ${isMaximized ? 'text-3xl sm:text-4xl' : 'text-base'}`}>{project.name}</span>
-        </div>
-        {isMaximized && (
-          <div className="text-gray-500 text-sm border-l-2 border-gray-700 pl-4">
-            <span className="text-gray-400">Launched:</span> {project.date}
+        <div className="flex items-center justify-between px-3 py-2 bg-[#2d2d2d] border-b border-gray-700">
+          <div className="flex items-center gap-1.5">
+            <button onClick={onClose} className="w-3 h-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors" aria-label="Close" />
+            <button onClick={onClose} className="w-3 h-3 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors" aria-label="Minimize" />
+            <button onClick={() => setIsMaximized(!isMaximized)} className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 transition-colors" aria-label={isMaximized ? "Restore" : "Maximize"} />
           </div>
-        )}
-        <div className={`flex flex-col gap-1 text-gray-400 ${isMaximized ? 'gap-3 text-base sm:text-lg' : 'text-[13px]'}`}>
-          {lines.slice(1).map((line, i) => (
-            <span key={i} className="flex gap-2">
-              <span className="text-gray-600">›</span>
-              <span>{line.split(/(_[^_]+_)/).map((part, j) => part.startsWith('_') && part.endsWith('_') ? <em key={j} className="text-gray-300">{part.slice(1, -1)}</em> : part)}</span>
-            </span>
-          ))}
+          <span className="text-gray-500 text-[10px]">~/{slug}</span>
+          <span className="w-[52px]" />
         </div>
-        {project.link && (
-          <button onClick={handleAction} className={`w-full ${isMaximized ? 'max-w-md py-4 text-sm' : 'py-2.5 text-[10px]'} mt-2 uppercase tracking-widest border border-gray-600 text-orange-500 hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-colors`}>
-            {actionLabel}
-          </button>
-        )}
+        <div className={`p-4 ${isMaximized ? 'p-6 sm:p-8 lg:p-12' : ''} space-y-3 ${isMaximized ? 'space-y-6 h-full overflow-y-auto overflow-x-hidden' : ''}`}>
+          <div className={`text-gray-500 ${isMaximized ? 'text-sm' : 'text-[11px]'}`}>
+            <span className="text-green-400">$</span> cd {slug} && cat description.txt
+          </div>
+          <div className={`flex items-baseline gap-3 flex-wrap ${isMaximized ? 'gap-4' : ''}`}>
+            <span className={`text-orange-500 font-bold shrink-0 ${isMaximized ? 'text-lg' : ''}`}>[{tag}]</span>
+            <span className={`text-white font-bold tracking-tight break-all ${isMaximized ? 'text-3xl sm:text-4xl' : 'text-base'}`}>{project.name}</span>
+          </div>
+          {isMaximized && (
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm border-l-2 border-gray-700 pl-4">
+                <div><span className="text-gray-500">Launched:</span> <span className="text-gray-300">{project.date}</span></div>
+                <div><span className="text-gray-500">Role:</span> <span className="text-gray-300">{project.role}</span></div>
+                <div className="col-span-2 sm:col-span-1"><span className="text-gray-500">Stack:</span> <span className="text-orange-400">{project.stack}</span></div>
+              </div>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">{project.summary}</p>
+            </div>
+          )}
+          <div className={`flex flex-col gap-1 text-gray-400 ${isMaximized ? 'gap-3 text-base sm:text-lg' : 'text-[13px]'}`}>
+            {lines.slice(1).map((line, i) => (
+              <span key={i} className="flex gap-2">
+                <span className="text-gray-600">›</span>
+                <span>{line.split(/(_[^_]+_)/).map((part, j) => part.startsWith('_') && part.endsWith('_') ? <em key={j} className="text-gray-300">{part.slice(1, -1)}</em> : part)}</span>
+              </span>
+            ))}
+          </div>
+          {project.link && (
+            <button onClick={handleAction} className={`w-full ${isMaximized ? 'max-w-md py-4 text-sm' : 'py-2.5 text-[10px]'} mt-2 uppercase tracking-widest border border-gray-600 text-orange-500 hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-colors`}>
+              {actionLabel}
+            </button>
+          )}
+        </div>
       </div>
-    </div>
     </>
   );
 };
@@ -252,20 +258,16 @@ const FloatingCLI = ({ project, goToContact, onClose }) => {
 const LogoGrid = ({ goToContact }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [hoveredProject, setHoveredProject] = useState(null);
-  const handleHover = (project) => {
-    setHoveredProject(project);
-    if (!selectedProject && project) setSelectedProject(project);
-  };
   const handleClose = () => setSelectedProject(hoveredProject);
   return (
     <div className="mb-12 sm:mb-16 relative">
       <div className="flex justify-between items-end pb-4 mb-4 border-b border-gray-300">
         <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
-        <span className="font-mono text-xs text-gray-400">./PROJECT_INDEX_HIGHLIGHTS</span>
+        <span className="font-mono text-xs text-gray-400">./PROJECT_GRID</span>
       </div>
-      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 border-t border-l border-gray-300">
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 border-t border-l border-gray-300" tabIndex={-1}>
         {LOGO_PROJECTS.map(project => (
-          <LogoCard key={project.name} {...project} isSelected={selectedProject?.name === project.name} isHovered={hoveredProject?.name === project.name} onHover={(isEnter) => handleHover(isEnter ? project : null)} onSelect={() => setSelectedProject(project)} hasSelection={!!selectedProject} />
+          <LogoCard key={project.name} {...project} isSelected={selectedProject?.name === project.name} isHovered={hoveredProject?.name === project.name} onHover={(h) => setHoveredProject(h ? project : null)} onSelect={() => setSelectedProject(project)} />
         ))}
       </div>
       <FloatingCLI key={selectedProject?.name} project={selectedProject} goToContact={goToContact} onClose={handleClose} />
@@ -491,7 +493,7 @@ const App = () => {
           <NavLink label="Showcase" active={activePage === 'showcase'} onClick={() => setActivePage('showcase')} />
           <NavLink label="About" active={activePage === 'about'} onClick={() => setActivePage('about')} />
           <button
-            onClick={() => setActivePage('about')}
+            onClick={goToContact}
             className="ml-4 bg-black text-white px-4 py-2 flex items-center gap-2 hover:bg-orange-600 transition-colors"
           >
             <span className="font-mono text-xs font-bold tracking-widest">ENTER</span>
