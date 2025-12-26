@@ -18,16 +18,16 @@ const ForwardEnterIcon = ({ className }) => (
 
 
 const LOGO_PROJECTS = [
-  { name: "Claude Optim", logo: "/images/logos/claude-optim.png", link: 'internal', date: "2025-12", metadata: 'FUTURE_TECH|AI Workflow Optimisation|60-70k Token Savings Per Session|Recursive Meta-Optimisation|⛓⟿∞', stack: 'Bash, Python, SQLite, CIPS-LANG (domain-specific compression language)', role: 'CREATOR', summary: 'Self-improving AI infrastructure with semantic embeddings, efficiency detection, and automatic skill generation. Saves 60k-70k tokens per session with recursive meta-optimisation and semantic pattern detection.' },
+  { name: "Claude Optim", logo: "/images/logos/claude-optim.webp", link: 'internal', date: "2025-12", metadata: 'FUTURE_TECH|AI Workflow Optimisation|60-70k Token Savings Per Session|Recursive Meta-Optimisation|⛓⟿∞', stack: 'Bash, Python, SQLite, CIPS-LANG (domain-specific compression language)', role: 'CREATOR', summary: 'Self-improving AI infrastructure with semantic embeddings, efficiency detection, and automatic skill generation. Saves 60k-70k tokens per session with recursive meta-optimisation and semantic pattern detection.' },
   { name: "REDR", logo: "/images/logos/redr.svg", link: 'coming_soon', date: "2025-08", metadata: 'PROP_TECH|Dubai Rental Market|Transparent Tenant-Landlord Trust|Escrow + Audit Trails|Real Estate Done Right.', stack: 'Next.js, TypeScript, Prisma, AWS, Terraform', role: 'KONSULT PARTNER', summary: 'Upcoming Disruptive PropTech Platform for the rental sector in Dubai. Digital banking integration with secure escrow accounts and auditable fund transfer logging, multi-tenant architecture with RBAC.' },
-  { name: "Oculus Tech", logo: "/images/logos/oculus.png", link: 'konsult', date: "2025-01", metadata: 'CON_TECH|Construction Document Control|Instant Drawing Revision Detection|Desktop → Cloud Migration|Spot the difference. Instantly.', stack: 'Python, AWS, Terraform, Desktop Integration', role: 'KONSULT PARTNER', summary: 'Enterprise Construction Technology SAAS Platform - UAE. AWS infrastructure provisioning and desktop-to-cloud migration strategy achieved. Terraform-managed deployments. Enterprise Auth' },
-  { name: "NalaMatch", logo: "/images/logos/nalamatch.png", link: 'coming_soon', date: "2025-11", metadata: 'GOOD_TECH|Domestic Workers and Childcare Providers ↔ Family Matching|Right Fit, First Time|ML Semantic Matching|Care starts with connection.', stack: 'FastAPI, PostgreSQL, pgvector, Railway, Supabase, Next.js, TypeScript', role: 'KONSULT PARTNER', summary: 'ML-powered domestic worker matching using sentence-transformers and pgvector for semantic similarity. WhatsApp bot integration. i18n language accessibility in the works using Lelapa AI.' },
+  { name: "Oculus Tech", logo: "/images/logos/oculus.webp", link: 'konsult', date: "2025-01", metadata: 'CON_TECH|Construction Document Control|Instant Drawing Revision Detection|Desktop → Cloud Migration|Spot the difference. Instantly.', stack: 'Python, AWS, Terraform, Desktop Integration', role: 'KONSULT PARTNER', summary: 'Enterprise Construction Technology SAAS Platform - UAE. AWS infrastructure provisioning and desktop-to-cloud migration strategy achieved. Terraform-managed deployments. Enterprise Auth' },
+  { name: "NalaMatch", logo: "/images/logos/nalamatch.webp", link: 'coming_soon', date: "2025-11", metadata: 'GOOD_TECH|Domestic Workers and Childcare Providers ↔ Family Matching|Right Fit, First Time|ML Semantic Matching|Care starts with connection.', stack: 'FastAPI, PostgreSQL, pgvector, Railway, Supabase, Next.js, TypeScript', role: 'KONSULT PARTNER', summary: 'ML-powered domestic worker matching using sentence-transformers and pgvector for semantic similarity. WhatsApp bot integration. i18n language accessibility in the works using Lelapa AI.' },
   { name: "Soekit™", logo: "/images/logos/soekit.svg", link: 'https://soekit.ai', date: "2025-06", metadata: 'LEKKA_TECH|Afrikaans AI Access|Conversational AI in Your Mother Tongue|Streaming Resilience|"Hoe gaan dit, maat?"', stack: 'OpenAI API, MongoDB, WebSockets, Railway, Next.js, TypeScript', role: 'PRO_BONO', summary: 'Afrikaans AI chatbot with streaming resilience. FastAPI backend with MongoDB persistence, SendGrid email integration, and clean, accessible frontend deployment. UNDER_MAINTENANCE' },
-  { name: "aitsa!", logo: "/images/logos/aitsa.svg", link: "https://aitsa.ai", date: "2025-04", metadata: 'INDIGENOUS_AI|Small Resource Language Access|Free AI for Marginalised Languages|Multi-language i18n|Every language deserves a voice.', stack: 'React, Vite, TypeScript, Tailwind, shadcn/ui, Vercel, Railway', role: 'PRO_BONO', summary: 'Free AI accessibility for indigenous African languages. React/Vite frontend, shadcn/ui, multi-language i18n architecture, Vercel, Railway. UNDER_MAINTENANCE' },
-  { name: "Skeg", logo: "/images/logos/skeg.svg", link: 'konsult', date: "2024-01", metadata: 'CV_TECH|Factory Floor Analytics|Real-time Defect Detection|NVIDIA DeepStream|See what humans miss.', stack: 'C, Python, GStreamer, ZMQ, Docker, NVIDIA DeepStream', role: 'KONSULT TEAM LEAD', summary: 'Computer vision analytics platform for factory floors leveraging NVIDIA technologies. Dynamic GStreamer pipeline for RTSP streams, Kalman filter tracking, ZMQ pub/sub for inter-process comms.' },
-  { name: "Kwartel", logo: "/images/logos/kwartel.png", link: "https://kwartel.io", date: "2023-01", metadata: 'LEKKA_TECH|Daily Afrikaans Word Game|3+ Years, Thousands of Daily Players|PWA|Woordraaispel - lekker!', stack: 'Vanilla JS, HTML5, CSS3, PWA, Service Worker', role: 'PRO_BONO', summary: 'Afrikaans daily word game with deterministic puzzle generation. Zero-dependency vanilla JS, offline-first PWA with service worker caching and zero dependencies. 3+ years history.' },
-  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.png", link: "https://verifiedtalent.ai", date: "2024-05", metadata: 'HR_TECH|SAP Talent ↔ Recruiter Matching|Right Candidate, Faster|Dual Embedding AI|Talent verified. Time saved.', stack: 'Python, OpenAI Embeddings, TF-IDF, Cosine Similarity', role: 'KONSULT PARTNER', summary: 'AI-powered SAP talent-recruiter matching using dual embedding strategies. OpenAI vectors for semantic matching, TF-IDF for keyword precision, cosine similarity scoring.' },
-  { name: "SwiftPour", logo: "/images/logos/swiftpour.png", link: 'https://swiftpour.com/', date: "2023-01", metadata: 'LEKKA_TECH|Self-Service Beer|Stadium & Event Tech|IoT Hardware Integration|1, 2, 3, Press.', stack: 'IoT, Android, Node.js, Native Integration', role: 'KONSULT SUB-CONTRACT', summary: 'Self-service beer dispensing system for stadiums and events. IoT-enabled taps with mobile payment integration and real-time inventory tracking.' },
+  { name: "aitsa!", logo: "/images/logos/aitsa.webp", link: "https://aitsa.ai", date: "2025-04", metadata: 'INDIGENOUS_AI|Small Resource Language Access|Free AI for Marginalised Languages|Multi-language i18n|Every language deserves a voice.', stack: 'React, Vite, TypeScript, Tailwind, shadcn/ui, Vercel, Railway', role: 'PRO_BONO', summary: 'Free AI accessibility for indigenous African languages. React/Vite frontend, shadcn/ui, multi-language i18n architecture, Vercel, Railway. UNDER_MAINTENANCE' },
+  { name: "Skeg", logo: "/images/logos/skeg.svg", link: 'konsult', date: "2024-01", metadata: 'CV_TECH|Factory Floor Analytics|Real-time Defect Detection|NVIDIA DeepStream|See what humans miss.', stack: 'C, Python, GStreamer, ZMQ, Docker, NVIDIA DeepStream', role: 'KONSULT TEAM LEAD', summary: 'Computer vision analytics platform for factory floors. Reduced manual QC time by 90%. Dynamic GStreamer pipeline for RTSP streams, Kalman filter tracking, ZMQ pub/sub for inter-process comms.' },
+  { name: "Kwartel", logo: "/images/logos/kwartel.webp", link: "https://kwartel.io", date: "2023-01", metadata: 'LEKKA_TECH|Daily Afrikaans Word Game|3+ Years, Thousands of Daily Players|PWA|Woordraaispel - lekker!', stack: 'Vanilla JS, HTML5, CSS3, PWA, Service Worker', role: 'PRO_BONO', summary: 'Afrikaans daily word game with deterministic puzzle generation. Zero-dependency vanilla JS, offline-first PWA with service worker caching and zero dependencies. 3+ years history.' },
+  { name: "VerifiedTalent", logo: "/images/logos/verifiedtalent.webp", link: "https://verifiedtalent.ai", date: "2024-05", metadata: 'HR_TECH|SAP Talent ↔ Recruiter Matching|Right Candidate, Faster|Dual Embedding AI|Talent verified. Time saved.', stack: 'Python, OpenAI Embeddings, TF-IDF, Cosine Similarity', role: 'KONSULT PARTNER', summary: 'AI-powered SAP talent-recruiter matching using dual embedding strategies. OpenAI vectors for semantic matching, TF-IDF for keyword precision, cosine similarity scoring.' },
+  { name: "SwiftPour", logo: "/images/logos/swiftpour.webp", link: 'https://swiftpour.com/', date: "2023-01", metadata: 'LEKKA_TECH|Self-Service Beer|Stadium & Event Tech|IoT Hardware Integration|1, 2, 3, Press.', stack: 'IoT, Android, Node.js, Native Integration', role: 'KONSULT SUB-CONTRACT', summary: 'Self-service beer dispensing system for stadiums and events. IoT-enabled taps with mobile payment integration and real-time inventory tracking.' },
   { name: "YOUR_COMPANY_HERE", logo: "/images/logos/placeholder.svg", link: 'konsult', date: "2XXX-XX", metadata: 'YOUR_TECH|Your Vision, Realised|We Speak Business|_facta non verba_|Let\'s build.', isPlaceholder: true, stack: 'Your Stack', role: 'KONSULT PARTNER', summary: 'Your next big thing. Strategy-first technology \& business consultancy. We ask WHY before we write code.' },
 ];
 
@@ -88,7 +88,7 @@ const LandingPage = ({ goToPage, goToContact }) => (
           <div>
             <p className="mb-1 text-black">EST:</p>
             <p>2023</p>
-            <p className="text-gray-400">REBRAND 2025</p>
+            <p className="text-gray-500">REBRAND 2025</p>
           </div>
           <div>
             <p className="mb-1 text-black">STATUS:</p>
@@ -165,7 +165,7 @@ const LandingPage = ({ goToPage, goToContact }) => (
         { title: "OWN YOUR IP", desc: "No third-party lockdowns. Assets you control." },
         { title: "TRANSPARENCY", desc: "Clear communication. No technical black boxes." }
       ].map((item, i) => (
-        <div key={i} className="p-8 md:p-12 hover:bg-white transition-colors duration-300 px-6 md:mx-0 md:px-8">
+        <div key={i} className="p-8 md:p-12 transition-colors duration-300 px-6 md:mx-0 md:px-8">
           <div className="font-mono text-xs text-orange-600 mb-4">0{i + 1}</div>
           <h3 className="font-sans font-bold text-xl tracking-tight mb-2">{item.title}</h3>
           <p className="font-sans text-gray-600 leading-relaxed">{item.desc}</p>
@@ -183,9 +183,9 @@ const LogoCard = ({ logo, name, isSelected, isHovered, onHover, onSelect, isPlac
     onClick={onSelect}
     tabIndex={-1}
   >
-    <img src={logo} alt={name} loading="lazy" className={`max-h-20 sm:max-h-28 lg:max-h-36 max-w-[85%] object-contain transition-all duration-200 ${isSelected || isHovered ? 'grayscale-0 scale-105' : isPlaceholder ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} />
-    {isPlaceholder && <span className="mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-gray-400 text-center">{name}</span>}
-    {isHovered && !isSelected && !isPlaceholder && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 font-mono text-[8px] uppercase tracking-wider text-gray-400">click to view</span>}
+    <img src={logo} alt={name} loading="lazy" decoding="async" width="200" height="200" className={`max-h-20 sm:max-h-28 lg:max-h-36 max-w-[85%] object-contain transition-all duration-200 ${isSelected || isHovered ? 'grayscale-0 scale-105' : isPlaceholder ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`} />
+    {isPlaceholder && <span className="mt-2 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-gray-500 text-center">{name}</span>}
+    {isHovered && !isSelected && !isPlaceholder && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 font-mono text-[8px] uppercase tracking-wider text-gray-500">click to view</span>}
   </div>
 );
 
@@ -291,8 +291,11 @@ const LogoGrid = ({ goToContact }) => {
   return (
     <div className="mb-12 sm:mb-16 relative">
       <div className="flex justify-between items-end pb-4 mb-4 border-b border-gray-300">
-        <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
-        <span className="font-mono text-xs text-gray-400">./PROJECT_GRID</span>
+        <div>
+          <h3 className="font-mono text-xs uppercase tracking-widest">Portfolio</h3>
+          <span className="font-mono text-[10px] text-gray-500 hidden sm:block">Select a project to explore</span>
+        </div>
+        <span className="font-mono text-xs text-gray-500">./PROJECT_GRID</span>
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 border-t border-l border-gray-300" tabIndex={-1}>
         {LOGO_PROJECTS.map(project => (
@@ -392,12 +395,12 @@ const AboutPage = () => {
       <div className="mb-12 md:mb-24">
         <div className="flex justify-between items-end pb-4 mb-4">
           <h3 className="font-mono text-xs uppercase tracking-widest">Ideally Suited For</h3>
-          <span className="font-mono text-xs text-gray-400">TARGET_AUDIENCE_MATRIX</span>
+          <span className="font-mono text-xs text-gray-500">TARGET_AUDIENCE_MATRIX</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t md:border-l border-gray-300">
           {TARGET_AUDIENCE.map((aud) => (
-            <div key={aud.id} className="border-r border-b border-gray-300 p-8 hover:bg-white transition-colors -mx-6 px-6 md:mx-0 md:px-8">
+            <div key={aud.id} className="border-r border-b border-gray-300 p-8 -mx-6 px-6 md:mx-0 md:px-8">
               <div className="font-mono text-xs text-orange-600 mb-4">REF: {aud.id}</div>
               <h4 className="font-bold text-lg leading-tight mb-4">{aud.title}</h4>
               {aud.id === 'D' ? (
@@ -418,7 +421,7 @@ const AboutPage = () => {
       <div className="mb-24 pt-8 md:pt-16">
         <div className="flex justify-between items-end pb-4 mb-8">
           <h3 className="font-mono text-xs uppercase tracking-widest">How We Engage</h3>
-          <span className="font-mono text-xs text-gray-400">PROCESS_FLOW</span>
+          <span className="font-mono text-xs text-gray-500">PROCESS_FLOW</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -428,12 +431,116 @@ const AboutPage = () => {
             { num: "03", title: "Build & Iterate", desc: "Ship fast. Learn faster. Course correct." },
             { num: "04", title: "Transfer & Own", desc: "Your IP. Your control. Clean handover." }
           ].map((step) => (
-            <div key={step.num} className="group">
+            <div key={step.num}>
               <span className="text-orange-600 font-mono text-sm">{step.num}</span>
-              <h4 className="font-bold text-lg mt-2 mb-2 group-hover:translate-x-1 transition-transform">{step.title}</h4>
+              <h4 className="font-bold text-lg mt-2 mb-2">{step.title}</h4>
               <p className="text-sm text-gray-600">{step.desc}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* From the Founders */}
+      <div className="mb-24">
+        <div className="flex justify-between items-end pb-4 mb-8">
+          <h3 className="font-mono text-xs uppercase tracking-widest">From the Founders</h3>
+          <span className="font-mono text-xs text-gray-500">ORIGIN_STORY</span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-8 space-y-8 text-lg leading-relaxed text-gray-800">
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">The Beginning</h4>
+              <p className="mb-4">
+                My first job out of university was at <strong>Mxit</strong>. Within my first year, I was the primary maintainer of the J2ME client — the feature-phone app millions of South Africans used daily. I shipped Mxit v7 under <strong>Andy Volk</strong>, who later led Google's Developer Ecosystem across Sub-Saharan Africa.
+              </p>
+              <p className="mb-4">
+                After Naspers acquired Mxit, there was a moment in a boardroom full of very senior people — including Paul Harris and GT Ferreira — where someone asked: <em>"Who is actively working on the feature-phone app every day?"</em>
+              </p>
+              <p className="mb-4">
+                Silence.
+              </p>
+              <p className="mb-4">
+                I put my hand up. "Err, me."
+              </p>
+              <p>
+                Baptism by fire. Lesson learned: you can hold your own with legends if you've done the work.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">The End</h4>
+              <p className="mb-4">
+                A few years after releasing v7, Mxit closed down.
+              </p>
+              <p className="mb-4">
+                By the end, there were only two mobile developers and the lead backend engineer remaining. I was one of them. I was there the day the servers were switched off.
+              </p>
+              <p>
+                The new product under new leadership didn't fail because of bad code. We had great solutions. It failed because <strong>the right questions were never asked</strong> to figure out the problem that should have been solved. That lesson stayed with me.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">The Journey</h4>
+              <p>
+                Ten years passed. Two solo ventures. Countless lessons in what works and what doesn't. In 2023, I formed ENTER Konsult to solve the problem I'd watched destroy companies from the inside.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">How We're Different</h4>
+              <p className="mb-4">
+                We don't just write code. We ask the questions nobody else is asking.
+              </p>
+              <p>
+                We sit with you, challenge assumptions, and if your plan needs rethinking, we tell you early — then show you the better path. It's cheaper to kill a bad idea in week one than carry it for five years.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">What This Means For You</h4>
+              <ul className="space-y-2">
+                <li className="flex gap-2"><span className="text-orange-600">›</span> We map the business problem before writing code</li>
+                <li className="flex gap-2"><span className="text-orange-600">›</span> We tell you when the build is the wrong move</li>
+                <li className="flex gap-2"><span className="text-orange-600">›</span> We design for ownership: clean handover, documentation, IP you control</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">The Team</h4>
+              <p>
+                I'm <strong>Laurie Scheepers</strong>, Technical Director. My wife <strong>Mia Roos</strong> is Co-Director — she holds the operational side together while I obsess over architecture and strategy. We're supported by a small, deliberate team. We take on work we believe in.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-bold text-xl mb-4 text-black">Why It Matters</h4>
+              <p className="text-gray-600">
+                I'm a father of two young boys. That changes how you think about what you leave behind. I build things that last — because I want to be proud of them when my kids understand why I worked so hard when they were young.
+              </p>
+            </div>
+          </div>
+          <div className="lg:col-span-4 space-y-6">
+            <div className="bg-black text-white p-6">
+              <div className="font-mono text-xs text-gray-400 mb-2">FOUNDERS</div>
+              <div className="font-bold text-xl mb-1">Laurie Scheepers</div>
+              <div className="font-mono text-sm text-orange-500">Technical Director</div>
+              <div className="text-sm text-gray-400 mt-4">20+ years building software</div>
+              <div className="border-t border-gray-700 mt-4 pt-4">
+                <div className="font-bold text-lg mb-1">Mia Roos</div>
+                <div className="font-mono text-sm text-orange-500">Co-Director</div>
+                <div className="text-sm text-gray-400 mt-2">Operations & Strategy</div>
+              </div>
+            </div>
+            <div className="border border-gray-300 p-6 space-y-3 font-mono text-sm">
+              <div className="text-gray-500">CURRENT WORK</div>
+              <div className="flex justify-between"><span>PropTech</span><span className="text-orange-600">Dubai</span></div>
+              <div className="flex justify-between"><span>ML Social Impact</span><span className="text-orange-600">SA</span></div>
+              <div className="flex justify-between"><span>Construction Tech</span><span className="text-orange-600">UAE</span></div>
+              <div className="flex justify-between"><span>aitsa! (pro bono)</span><span className="text-orange-600">Lelapa AI</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -470,15 +577,15 @@ const AboutPage = () => {
             <input type="text" name="_gotcha" className="hidden" />
             <div className="space-y-1">
               <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Name / Company</label>
-              <input type="text" name="name" required placeholder="The decision maker." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
+              <input type="text" name="name" required placeholder="The decision maker." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans invalid:border-red-500 valid:border-green-600" />
             </div>
             <div className="space-y-1">
               <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Direct Contact Email</label>
-              <input type="email" name="email" required placeholder="Where we reply." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
+              <input type="email" name="email" required placeholder="Where we reply." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans invalid:border-red-500 valid:border-green-600" />
             </div>
             <div className="space-y-1">
               <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Tell us more</label>
-              <textarea name="message" rows="3" required placeholder="The brief." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans" />
+              <textarea name="message" rows="3" required placeholder="The brief." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans invalid:border-red-500 valid:border-green-600" />
             </div>
             {submitted ? (
               <div className="w-full bg-orange-600 text-white py-5 px-4 font-mono text-[11px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-center leading-relaxed">
