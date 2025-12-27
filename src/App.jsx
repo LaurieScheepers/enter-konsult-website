@@ -453,16 +453,13 @@ const AboutPage = () => {
             <div>
               <h4 className="font-bold text-xl mb-4 text-black">The Beginning</h4>
               <p className="mb-4">
-                My first job out of university was at <strong>Mxit</strong>. Within my first year, I was the primary maintainer of the J2ME client — the feature-phone app millions of South Africans used daily. I shipped Mxit v7 under <strong>Andy Volk</strong>, who later led Google's Developer Ecosystem across Sub-Saharan Africa.
+                Our founder's first job out of university was at <strong>Mxit</strong>. Within his first year, he was the primary maintainer of the J2ME client — the feature-phone app millions of South Africans used daily. He shipped Mxit v7 under <strong>Andy Volk</strong>, who later led Google's Developer Ecosystem across Sub-Saharan Africa.
               </p>
               <p className="mb-4">
                 After Naspers acquired Mxit, there was a moment in a boardroom full of very senior people — including Paul Harris and GT Ferreira — where someone asked: <em>"Who is actively working on the feature-phone app every day?"</em>
               </p>
               <p className="mb-4">
-                Silence.
-              </p>
-              <p className="mb-4">
-                I put my hand up. "Err, me."
+                Silence. One hand went up.
               </p>
               <p>
                 Baptism by fire. Lesson learned: you can hold your own with legends if you've done the work.
@@ -475,17 +472,17 @@ const AboutPage = () => {
                 A few years after releasing v7, Mxit closed down.
               </p>
               <p className="mb-4">
-                By the end, there were only two mobile developers and the lead backend engineer remaining. I was one of them. I was there the day the servers were switched off.
+                By the end, there were only two mobile developers and the lead backend engineer remaining. He was one of them — there the day the servers were switched off.
               </p>
               <p>
-                The new product under new leadership didn't fail because of bad code. We had great solutions. It failed because <strong>the right questions were never asked</strong> to figure out the problem that should have been solved. That lesson stayed with me.
+                The new product under new leadership didn't fail because of bad code. The solutions were solid. It failed because <strong>the right questions were never asked</strong> to figure out the problem that should have been solved. That lesson stuck.
               </p>
             </div>
 
             <div>
               <h4 className="font-bold text-xl mb-4 text-black">The Journey</h4>
               <p>
-                Ten years passed. Two solo ventures. Countless lessons in what works and what doesn't. In 2023, I formed ENTER Konsult to solve the problem I'd watched destroy companies from the inside.
+                Ten years passed. Two solo ventures. Countless lessons in what works and what doesn't. In 2023, CodeTonight was founded as a solo venture to solve the problem he'd watched destroy companies from the inside. The team has since expanded, and we rebranded to ENTER Konsult in 2025.
               </p>
             </div>
 
@@ -511,27 +508,27 @@ const AboutPage = () => {
             <div>
               <h4 className="font-bold text-xl mb-4 text-black">The Team</h4>
               <p>
-                I'm <strong>Laurie Scheepers</strong>, Technical Director. My wife <strong>Mia Roos</strong> is Co-Director — she holds the operational side together while I obsess over architecture and strategy. We're supported by a small, deliberate team. We take on work we believe in.
+                We're a small, deliberate team of managing partners and specialists. Operations and strategy work in lockstep with architecture and execution. We take on work we believe in.
               </p>
             </div>
 
             <div>
               <h4 className="font-bold text-xl mb-4 text-black">Why It Matters</h4>
               <p className="text-gray-600">
-                I'm a father of two young boys. That changes how you think about what you leave behind. I build things that last — because I want to be proud of them when my kids understand why I worked so hard when they were young.
+                We're parents to young children. That shapes how we think about what we leave behind. We build things that last — things we can be proud of.
               </p>
             </div>
           </div>
           <div className="lg:col-span-4 space-y-6">
             <div className="bg-black text-white p-6">
-              <div className="font-mono text-xs text-gray-400 mb-2">FOUNDERS</div>
-              <div className="font-bold text-xl mb-1">Laurie Scheepers</div>
-              <div className="font-mono text-sm text-orange-500">Technical Director</div>
-              <div className="text-sm text-gray-400 mt-4">20+ years building software</div>
+              <div className="font-mono text-xs text-gray-400 mb-2">LEADERSHIP</div>
+              <div className="font-bold text-xl mb-1">Managing Partners</div>
+              <div className="font-mono text-sm text-orange-500">Technical + Operations</div>
+              <div className="text-sm text-gray-400 mt-4">20+ years combined experience</div>
               <div className="border-t border-gray-700 mt-4 pt-4">
-                <div className="font-bold text-lg mb-1">Mia Roos</div>
-                <div className="font-mono text-sm text-orange-500">Co-Director</div>
-                <div className="text-sm text-gray-400 mt-2">Operations & Strategy</div>
+                <div className="font-bold text-lg mb-1">Specialist Network</div>
+                <div className="font-mono text-sm text-orange-500">Design • Development • Strategy</div>
+                <div className="text-sm text-gray-400 mt-2">On-demand expertise</div>
               </div>
             </div>
             <div className="border border-gray-300 p-6 space-y-3 font-mono text-sm">
