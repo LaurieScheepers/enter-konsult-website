@@ -61,7 +61,7 @@ const NavLink = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
     className={`text-xs font-mono uppercase tracking-widest px-2 py-1 transition-all duration-300 relative
-      ${active ? 'text-black font-bold' : 'text-gray-500 hover:text-black'}
+      ${active ? 'text-black font-bold' : 'text-gray-700 hover:text-black'}
     `}
   >
     {label}
@@ -80,7 +80,7 @@ const LandingPage = ({ goToPage, goToContact }) => (
       {/* Section A: Metadata + Heading Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-8">
         {/* Left Col: Metadata */}
-        <div className="col-span-1 lg:col-span-3 font-mono text-xs space-y-6 text-gray-500 pt-2">
+        <div className="col-span-1 lg:col-span-3 font-mono text-xs space-y-6 text-gray-700 pt-2">
           <div>
             <p className="mb-1 text-black">CONTEXT:</p>
             <p>BUSINESS STRATEGY</p>
@@ -89,12 +89,12 @@ const LandingPage = ({ goToPage, goToContact }) => (
           <div>
             <p className="mb-1 text-black">EST:</p>
             <p>2023</p>
-            <p className="text-gray-500">REBRAND 2025</p>
+            <p className="text-gray-700">REBRAND 2025</p>
           </div>
           <div>
             <p className="mb-1 text-black">STATUS:</p>
-            <p className="text-orange-600 flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-600 rounded-full animate-pulse" />
+            <p className="text-orange-700 flex items-center gap-2">
+              <span className="w-2 h-2 bg-orange-700 rounded-full animate-pulse" />
               ACCEPTING CLIENTS
             </p>
           </div>
@@ -144,12 +144,12 @@ const LandingPage = ({ goToPage, goToContact }) => (
 
               {/* Tagline */}
               <div className="text-right">
-                <span className="font-mono text-[10px] tracking-widest uppercase text-gray-500 block">
+                <span className="font-mono text-[10px] tracking-widest uppercase text-gray-700 block">
                   PRIVATE AND PUBLIC.
                 </span>
                 <span
                   onClick={goToContact}
-                  className="group font-mono text-[10px] tracking-widest uppercase text-orange-600 block cursor-pointer border-b border-orange-600/40 hover:border-orange-600 pt-1 pb-0.5 transition-all duration-300 hover:tracking-wider w-fit ml-auto">
+                  className="group font-mono text-[10px] tracking-widest uppercase text-orange-700 block cursor-pointer border-b border-orange-700/40 hover:border-orange-700 pt-1 pb-0.5 transition-all duration-300 hover:tracking-wider w-fit ml-auto">
                   LET'S BUILD <ArrowRight className="w-3 h-3 inline-block ml-1 group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
@@ -167,8 +167,8 @@ const LandingPage = ({ goToPage, goToContact }) => (
         { title: "TRANSPARENCY", desc: "Clear communication. No technical black boxes." }
       ].map((item, i) => (
         <div key={i} className="p-8 md:p-12 transition-colors duration-300 px-6 md:mx-0 md:px-8">
-          <div className="font-mono text-xs text-orange-600 mb-4">0{i + 1}</div>
-          <h3 className="font-sans font-bold text-xl tracking-tight mb-2">{item.title}</h3>
+          <div className="font-mono text-xs text-orange-700 mb-4">0{i + 1}</div>
+          <h2 className="font-sans font-bold text-xl tracking-tight mb-2">{item.title}</h2>
           <p className="font-sans text-gray-600 leading-relaxed">{item.desc}</p>
         </div>
       ))}
@@ -662,7 +662,11 @@ const App = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button className="sm:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          className="sm:hidden p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+        >
           <div className="space-y-1">
             <span className={`block w-6 h-0.5 bg-black transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
             <span className={`block w-6 h-0.5 bg-black transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
