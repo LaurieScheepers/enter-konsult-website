@@ -47,7 +47,7 @@ export function ContactPage() {
                 </span>
               </p>
 
-              <div className="space-y-4 font-mono text-sm text-gray-500">
+              <div className="space-y-4 font-mono text-sm text-a11y-gray">
                 <p>EMAIL: LAURIE@ENTERKONSULT.COM</p>
                 <p>LOC: CAPE TOWN, SOUTH AFRICA</p>
                 <p>RATES: SCOPE-BASED</p>
@@ -61,11 +61,11 @@ export function ContactPage() {
                   <div className="w-48 h-px bg-gray-300 mx-auto" />
                   <div className="space-y-2 text-gray-600">
                     <p className="text-sm">We've received your brief.</p>
-                    <p className="text-xs text-gray-500">Expect contact within 24-48 hours.</p>
+                    <p className="text-xs text-a11y-gray">Expect contact within 24-48 hours.</p>
                   </div>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-6 py-3 border border-gray-300 font-mono text-xs uppercase tracking-widest text-gray-500 hover:border-black hover:text-black transition-colors"
+                    className="mt-4 px-6 py-3 border border-gray-300 font-mono text-xs uppercase tracking-widest text-a11y-gray hover:border-black hover:text-black transition-colors"
                   >
                     New Inquiry
                   </button>
@@ -75,15 +75,15 @@ export function ContactPage() {
               <form className="space-y-6" action="https://formspree.io/f/mrbnkdjd" method="POST" onSubmit={handleSubmit}>
                 <input type="text" name="_gotcha" className="hidden" />
                 <div className="space-y-1">
-                  <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Name / Company</label>
+                  <label className="font-mono text-xs uppercase tracking-widest text-a11y-gray">Name / Company</label>
                   <input type="text" name="name" required placeholder="The decision maker." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans invalid:border-red-500 valid:border-green-600" />
                 </div>
                 <div className="space-y-1">
-                  <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Direct Contact Email</label>
+                  <label className="font-mono text-xs uppercase tracking-widest text-a11y-gray">Direct Contact Email</label>
                   <input type="email" name="email" required placeholder="Where we reply." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans invalid:border-red-500 valid:border-green-600" />
                 </div>
                 <div className="space-y-1">
-                  <label className="font-mono text-xs uppercase tracking-widest text-gray-500">Tell us more</label>
+                  <label className="font-mono text-xs uppercase tracking-widest text-a11y-gray">Tell us more</label>
                   <textarea name="message" rows="3" required placeholder="The brief." className="w-full bg-gray-50 border-b border-gray-300 p-3 focus:border-orange-600 focus:bg-white focus:border-b-2 outline-none transition-all font-sans invalid:border-red-500 valid:border-green-600" />
                 </div>
                 <button type="submit" className="w-full bg-black text-white py-4 font-mono text-xs uppercase tracking-widest hover:bg-orange-600 transition-colors flex justify-center items-center gap-2">

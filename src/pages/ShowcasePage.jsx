@@ -22,7 +22,7 @@ export function ShowcasePage() {
               ET ALIA <ArrowRight className="w-3 h-3 inline-block ml-1 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
-          <p className="font-mono text-xs text-gray-500 max-w-xs text-right mt-4 md:mt-0 ml-auto md:ml-0">
+          <p className="font-mono text-xs text-a11y-gray max-w-xs text-right mt-4 md:mt-0 ml-auto md:ml-0">
             BESPOKE SOLUTIONS FITTING UNIQUE BUSINESS VISIONS.
           </p>
         </div>

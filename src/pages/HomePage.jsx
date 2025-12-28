@@ -24,8 +24,8 @@ export function HomePage() {
               </div>
               <div>
                 <p className="mb-1 text-black">STATUS:</p>
-                <p className="text-orange-700 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-700 rounded-full animate-pulse" />
+                <p className="text-a11y-orange flex items-center gap-2">
+                  <span className="w-2 h-2 bg-a11y-orange rounded-full animate-pulse" />
                   ACCEPTING CLIENTS
                 </p>
               </div>
@@ -35,7 +35,7 @@ export function HomePage() {
               <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-sans font-bold tracking-tighter leading-[0.95] lg:leading-[0.85] text-black text-right lg:text-left">
                 WE SPEAK <br />
                 BUSINESS. <br />
-                <span className="text-gray-400">
+                <span className="text-a11y-muted">
                   <span className="lg:hidden block">NOT JUST</span>
                   <span className="lg:hidden block">CODE.</span>
                   <span className="hidden lg:inline">NOT JUST CODE.</span>
@@ -77,7 +77,7 @@ export function HomePage() {
         <div className="-mx-6 md:mx-0 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-300 border-b border-gray-300 bg-gray-100/50">
           {VALUE_PROPS.map((item, i) => (
             <div key={i} className="p-8 md:p-12 px-6 md:mx-0 md:px-8">
-              <div className="font-mono text-xs text-orange-700 mb-4">0{i + 1}</div>
+              <div className="font-mono text-xs text-a11y-orange mb-4">0{i + 1}</div>
               <h2 className="font-sans font-bold text-xl tracking-tight mb-2">{item.title}</h2>
               <p className="font-sans text-gray-600 leading-relaxed">{item.desc}</p>
             </div>

@@ -66,7 +66,7 @@ export function Layout({ children }) {
                 className="group flex items-center gap-4 py-5 border-b border-gray-300 last:border-b-0"
                 onClick={closeMenu}
               >
-                <span className="font-mono text-xs text-gray-400 w-6">0{i + 1}</span>
+                <span className="font-mono text-xs text-a11y-gray w-6">0{i + 1}</span>
                 <span className="text-xl font-sans font-bold tracking-tight group-hover:text-orange-600 transition-colors">{item.label}</span>
               </Link>
             ))}
@@ -82,19 +82,19 @@ export function Layout({ children }) {
         <div className="max-w-screen-xl mx-auto">
           <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <nav className="flex gap-6 font-mono text-xs uppercase tracking-widest">
-              <Link to="/" className="text-gray-500 hover:text-black transition-colors">Home</Link>
-              <Link to="/services" className="text-gray-500 hover:text-black transition-colors">Services</Link>
-              <Link to="/work" className="text-gray-500 hover:text-black transition-colors">Work</Link>
-              <Link to="/about" className="text-gray-500 hover:text-black transition-colors">About</Link>
-              <Link to="/contact" className="text-gray-500 hover:text-black transition-colors">Contact</Link>
+              <Link to="/" className="text-a11y-gray hover:text-black transition-colors">Home</Link>
+              <Link to="/services" className="text-a11y-gray hover:text-black transition-colors">Services</Link>
+              <Link to="/work" className="text-a11y-gray hover:text-black transition-colors">Work</Link>
+              <Link to="/about" className="text-a11y-gray hover:text-black transition-colors">About</Link>
+              <Link to="/contact" className="text-a11y-gray hover:text-black transition-colors">Contact</Link>
             </nav>
-            <div className="flex items-center gap-6 font-mono text-xs text-gray-500">
+            <div className="flex items-center gap-6 font-mono text-xs text-a11y-gray">
               <span>© 2025 CodeTonight (Pty) Ltd t/a <span className="font-bold">ENTER Konsult</span></span>
               <a
                 href="https://www.linkedin.com/company/enterkonsult/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-orange-600 transition-colors"
+                className="text-a11y-gray hover:text-orange-600 transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

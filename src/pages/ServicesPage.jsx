@@ -39,7 +39,7 @@ export function ServicesPage() {
           <div className="lg:col-span-8">
             <h1 className="text-5xl md:text-7xl font-sans font-bold tracking-tighter leading-[0.9] mb-8">
               STRATEGY FIRST.<br />
-              <span className="text-gray-400">THEN CODE.</span>
+              <span className="text-a11y-muted">THEN CODE.</span>
             </h1>
             <div className="text-xl md:text-2xl font-sans font-medium leading-relaxed space-y-8 border-l border-black pl-8">
               <p>
@@ -70,7 +70,7 @@ export function ServicesPage() {
         <div className="mb-24">
           <div className="flex justify-between items-end pb-4 mb-8">
             <h2 className="font-mono text-xs uppercase tracking-widest">What We Do</h2>
-            <span className="font-mono text-xs text-gray-500">SERVICE_MATRIX</span>
+            <span className="font-mono text-xs text-a11y-gray">SERVICE_MATRIX</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -94,7 +94,7 @@ export function ServicesPage() {
         <div className="mb-24">
           <div className="flex justify-between items-end pb-4 mb-8">
             <h2 className="font-mono text-xs uppercase tracking-widest">How We Work</h2>
-            <span className="font-mono text-xs text-gray-500">PROCESS_FLOW</span>
+            <span className="font-mono text-xs text-a11y-gray">PROCESS_FLOW</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -43,7 +43,7 @@ export function AboutPage() {
         <div className="mb-12 md:mb-24">
           <div className="flex justify-between items-end pb-4 mb-4">
             <h2 className="font-mono text-xs uppercase tracking-widest">Ideally Suited For</h2>
-            <span className="font-mono text-xs text-gray-500">TARGET_AUDIENCE_MATRIX</span>
+            <span className="font-mono text-xs text-a11y-gray">TARGET_AUDIENCE_MATRIX</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t md:border-l border-gray-300">
@@ -68,7 +68,7 @@ export function AboutPage() {
         <div className="mb-24 pt-8 md:pt-16">
           <div className="flex justify-between items-end pb-4 mb-8">
             <h2 className="font-mono text-xs uppercase tracking-widest">How We Engage</h2>
-            <span className="font-mono text-xs text-gray-500">PROCESS_FLOW</span>
+            <span className="font-mono text-xs text-a11y-gray">PROCESS_FLOW</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -85,7 +85,7 @@ export function AboutPage() {
         <div className="mb-24">
           <div className="flex justify-between items-end pb-4 mb-8">
             <h2 className="font-mono text-xs uppercase tracking-widest">From the Founders</h2>
-            <span className="font-mono text-xs text-gray-500">ORIGIN_STORY</span>
+            <span className="font-mono text-xs text-a11y-gray">ORIGIN_STORY</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -93,7 +93,7 @@ export function AboutPage() {
               <div>
                 <h3 className="font-bold text-xl mb-4 text-black">The Beginning</h3>
                 <p className="mb-4">
-                  Our founder's first job out of university was at <strong>Mxit</strong>. Within his first year, he was the primary maintainer of the J2ME client — the feature-phone app millions of South Africans used daily. He shipped Mxit v7 under <strong>Andy Volk</strong>, who later led Google's Developer Ecosystem across Sub-Saharan Africa.
+                  Our founder's first job out of university was at <strong>Mxit</strong>. By the end of his first year, he was the primary maintainer of the J2ME client — the feature-phone app millions of South Africans used daily. He shipped Mxit v7 under <strong>Andy Volk</strong>, who later led Google's Developer Ecosystem across Sub-Saharan Africa.
                 </p>
                 <p className="mb-4">
                   After Naspers acquired Mxit, there was a moment in a boardroom full of very senior people — including Paul Harris and GT Ferreira — where someone asked: <em>"Who is actively working on the feature-phone app every day?"</em>
@@ -172,7 +172,7 @@ export function AboutPage() {
                 </div>
               </div>
               <div className="border border-gray-300 p-6 space-y-3 font-mono text-sm">
-                <div className="text-gray-500">CURRENT WORK</div>
+                <div className="text-a11y-gray">CURRENT WORK</div>
                 <div className="flex justify-between"><span>PropTech</span><span className="text-orange-600">Dubai</span></div>
                 <div className="flex justify-between"><span>ML Social Impact</span><span className="text-orange-600">SA</span></div>
                 <div className="flex justify-between"><span>Construction Tech</span><span className="text-orange-600">UAE</span></div>
