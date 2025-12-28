@@ -21,26 +21,92 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://enterkonsult.com">
     <meta property="og:site_name" content="ENTER Konsult">
+    <meta property="og:locale" content="en_ZA">
     <meta property="og:image" content="https://enterkonsult.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ENTER Konsult - Business Strategy & Technology Consultancy">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ENTER Konsult | Business Strategy & Technology Consultancy">
     <meta name="twitter:description" content="We solve business problems with technology. Own your IP, control your future. Strategic consulting for founders, CTOs and enterprises.">
     <meta name="twitter:image" content="https://enterkonsult.com/og-image.png">
     <link rel="canonical" href="https://enterkonsult.com">
+    <meta name="geo.region" content="ZA-WC">
+    <meta name="geo.placename" content="Cape Town">
+    <meta name="geo.position" content="-33.9249;18.4241">
+    <meta name="ICBM" content="-33.9249, 18.4241">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "ENTER Konsult",
-      "url": "https://enterkonsult.com",
-      "logo": "https://enterkonsult.com/favicon.svg",
-      "description": "A Technology Consultancy that solves business problems. We help you own your IP and control your future.",
-      "areaServed": "Worldwide",
-      "serviceType": ["Technology Consulting", "Business Strategy", "Software Development", "Technical Leadership"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://enterkonsult.com/#organization",
+          "name": "ENTER Konsult",
+          "alternateName": "CodeTonight (Pty) Ltd",
+          "url": "https://enterkonsult.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://enterkonsult.com/favicon.svg",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://enterkonsult.com/og-image.png",
+          "description": "Technology consultancy solving business problems. Custom software development, technical strategy, digital transformation.",
+          "foundingDate": "2023",
+          "areaServed": "Worldwide",
+          "sameAs": ["https://www.linkedin.com/company/enterkonsult/"]
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://enterkonsult.com/#localbusiness",
+          "name": "ENTER Konsult",
+          "image": "https://enterkonsult.com/og-image.png",
+          "url": "https://enterkonsult.com",
+          "telephone": "",
+          "email": "laurie@enterkonsult.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cape Town",
+            "addressRegion": "Western Cape",
+            "addressCountry": "ZA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -33.9249,
+            "longitude": 18.4241
+          },
+          "priceRange": "$$$$",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://enterkonsult.com/#website",
+          "url": "https://enterkonsult.com",
+          "name": "ENTER Konsult",
+          "description": "Business Strategy & Technology Consultancy",
+          "publisher": {"@id": "https://enterkonsult.com/#organization"},
+          "inLanguage": "en-ZA"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://enterkonsult.com/#service",
+          "name": "ENTER Konsult",
+          "url": "https://enterkonsult.com",
+          "logo": "https://enterkonsult.com/favicon.svg",
+          "description": "A Technology Consultancy that solves business problems. We help you own your IP and control your future.",
+          "areaServed": "Worldwide",
+          "serviceType": ["Technology Consulting", "Business Strategy", "Software Development", "Technical Leadership", "Fractional CTO"],
+          "provider": {"@id": "https://enterkonsult.com/#organization"}
+        }
+      ]
     }
     </script>
   </head>
