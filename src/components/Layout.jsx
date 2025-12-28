@@ -82,14 +82,14 @@ export function Layout({ children }) {
         <div className="max-w-screen-xl mx-auto">
           <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <nav className="flex gap-6 font-mono text-xs uppercase tracking-widest">
-              <Link to="/" className="text-a11y-gray hover:text-black transition-colors">Home</Link>
-              <Link to="/services" className="text-a11y-gray hover:text-black transition-colors">Services</Link>
-              <Link to="/work" className="text-a11y-gray hover:text-black transition-colors">Work</Link>
-              <Link to="/about" className="text-a11y-gray hover:text-black transition-colors">About</Link>
-              <Link to="/contact" className="text-a11y-gray hover:text-black transition-colors">Contact</Link>
+              <Link to="/" className="text-a11y-gray hover:text-orange-600 transition-colors">Home</Link>
+              <Link to="/services" className="text-a11y-gray hover:text-orange-600 transition-colors">Services</Link>
+              <Link to="/work" className="text-a11y-gray hover:text-orange-600 transition-colors">Showcase</Link>
+              <Link to="/about" className="text-a11y-gray hover:text-orange-600 transition-colors">About</Link>
+              <Link to="/contact" className="text-a11y-gray hover:text-orange-600 transition-colors">Contact</Link>
             </nav>
             <div className="flex items-center gap-6 font-mono text-xs text-a11y-gray">
-              <span>© 2025 CodeTonight (Pty) Ltd t/a <span className="font-bold">ENTER Konsult</span></span>
+              <span>© {new Date().getFullYear()} <span className="font-bold">ENTER Konsult</span> - CodeTonight (Pty) Ltd.</span>
               <a
                 href="https://www.linkedin.com/company/enterkonsult/"
                 target="_blank"
