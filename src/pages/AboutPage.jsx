@@ -164,7 +164,7 @@ export function AboutPage() {
                 <div className="font-mono text-xs text-gray-400 mb-2">LEADERSHIP</div>
                 <div className="font-bold text-xl mb-1">Managing Partners</div>
                 <div className="font-mono text-sm text-orange-500">Technical + Operations</div>
-                <div className="text-sm text-gray-400 mt-4">20+ years combined experience</div>
+                <div className="text-sm text-gray-400 mt-4">30+ years combined experience</div>
                 <div className="border-t border-gray-700 mt-4 pt-4">
                   <div className="font-bold text-lg mb-1">Specialist Network</div>
                   <div className="font-mono text-sm text-orange-500">Design • Development • Strategy</div>

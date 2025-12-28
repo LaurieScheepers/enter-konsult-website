@@ -24,7 +24,7 @@ const META = {
   },
   about: {
     title: 'About ENTER Konsult | Cape Town Software Consultancy',
-    description: 'Founded 2023, rebranded 2025. 20+ years experience. From Mxit to enterprise.',
+    description: 'Founded 2023, rebranded 2025. 30+ years combined experience. From Mxit to enterprise.',
     canonical: `${BASE_URL}/about`,
     keywords: 'about ENTER Konsult, Cape Town software company, technology consultancy, software developers'
   },
