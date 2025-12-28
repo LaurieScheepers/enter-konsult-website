@@ -45,6 +45,12 @@
   outline-offset: 4px;
 }
 
+/* Prevent double focus ring on form inputs (they have border-based focus) */
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
 /* Reduced motion for vestibular disorders */
 @media (prefers-reduced-motion: reduce) {
   *,

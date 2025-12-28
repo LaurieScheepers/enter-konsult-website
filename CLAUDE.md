@@ -9,17 +9,19 @@
 
 ## CURRENT STATE
 
-**Status**: Production Ready + LinkedIn Launch Complete
+**Status**: Production Ready + SEO Multi-Page Architecture
 **Branch**: main
 **Deployment**: Vercel (auto-deploy on push)
-**Last Updated**: 2025-12-15
-**Latest Commit**: 6764787
+**Last Updated**: 2025-12-28
+**Latest Commit**: SEO overhaul
 
 ## TECH STACK
 
 | Layer | Technology |
 |-------|------------|
 | Framework | React 18 + Vite |
+| Routing | React Router DOM v7 |
+| SEO | react-helmet-async |
 | Styling | Tailwind CSS 3 |
 | Icons | Lucide React |
 | Forms | Formspree |
@@ -48,16 +50,43 @@ npm run preview  # Preview production build
 
 ```text
 src/
-  App.jsx           # Single-file React app (pages, components, data)
-  index.css         # Tailwind imports + custom animations
-  main.jsx          # React entry point
+  App.jsx              # Router with Layout wrapper
+  main.jsx             # React entry point with BrowserRouter + HelmetProvider
+  index.css            # Tailwind imports + custom animations
+  data.js              # LOGO_PROJECTS, TARGET_AUDIENCE, VALUE_PROPS, etc.
+  pages/
+    HomePage.jsx       # Landing page (/)
+    ServicesPage.jsx   # Services page (/services) - NEW
+    ShowcasePage.jsx   # Portfolio page (/work)
+    AboutPage.jsx      # About page (/about)
+    ContactPage.jsx    # Contact form (/contact) - extracted from About
+  components/
+    Icons.jsx          # ForwardEnterIcon
+    NavLink.jsx        # Router-aware navigation link
+    LogoGrid.jsx       # Portfolio grid + FloatingCLI
+    Layout.jsx         # Header, Footer, main wrapper
+    SEO.jsx            # react-helmet-async meta tags
 public/
-  images/           # Static assets
-  pledge/           # Static pledge page (LinkedIn commitments)
-  *.svg, *.ico      # Favicon set
+  images/              # Static assets
+  pledge/              # Static pledge page (LinkedIn commitments)
+  sitemap.xml          # SEO sitemap
+  robots.txt           # Crawler directives
+  *.svg, *.ico         # Favicon set
+vercel.json            # SPA fallback rewrites
 ```
 
-**Design Decision**: Single-file architecture for simplicity. All pages (Landing, Showcase, About) and components in one file. No routing library - state-driven navigation. Static HTML pages in public/ for standalone content (e.g., /pledge).
+**Design Decision**: Multi-page architecture with React Router for SEO. Each route has unique meta tags via react-helmet-async. Vercel ISR handles prerendering. Static HTML pages in public/ for standalone content (e.g., /pledge).
+
+## ROUTES
+
+| Path | Page | SEO Title |
+|------|------|-----------|
+| `/` | HomePage | ENTER Konsult \| Tech Consultancy & Software Development \| South Africa |
+| `/services` | ServicesPage | Software Development Services \| ENTER Konsult \| South Africa |
+| `/work` | ShowcasePage | Portfolio \| Custom Software Projects \| ENTER Konsult |
+| `/about` | AboutPage | About ENTER Konsult \| Cape Town Software Consultancy |
+| `/contact` | ContactPage | Contact ENTER Konsult \| Start Your Project |
+| `/pledge` | Static HTML | (standalone) |
 
 ## DESIGN SYSTEM
 
@@ -120,11 +149,11 @@ Full-width 1px grey line separator.
 
 ## CONSTRAINTS
 
-1. **No routing library** - State-based navigation only
-2. **Single App.jsx** - All code in one file
-3. **No comments in code** - Self-documenting patterns
-4. **British English** - Spellings and conventions
-5. **Swiss Nihilism** - Every element must have visual purpose and tension
+1. **Swiss Nihilism** - Every element must have visual purpose and tension
+2. **No comments in code** - Self-documenting patterns
+3. **British English** - Spellings and conventions
+4. **Modular pages** - Each page in separate file with SEO component
+5. **Shared components** - Icons, NavLink, Layout in components/
 
 ## MOBILE CONSIDERATIONS
 
